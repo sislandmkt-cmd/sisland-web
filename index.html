@@ -860,46 +860,6 @@
   /* TYPEWRITER */
   .typewriter { border-right: 2px solid var(--teal); white-space: nowrap; overflow: hidden; }
 
-  .section-divider {
-    display: flex; align-items: center; justify-content: center;
-    gap: 12px; width: 100%; max-width: 500px;
-    margin: 0 auto; padding: 24px 24px 16px; position: relative;
-  }
-  .section-divider::before, .section-divider::after {
-    content: ''; flex: 1; height: 1px; position: relative;
-    background: linear-gradient(90deg, transparent 0%, rgba(45,184,197,.3) 30%, rgba(45,184,197,.8) 70%, rgba(201,168,76,.9) 100%);
-    box-shadow: 0 0 6px rgba(45,184,197,.4), 0 0 12px rgba(45,184,197,.15);
-  }
-  .section-divider::after {
-    background: linear-gradient(90deg, rgba(201,168,76,.9) 0%, rgba(45,184,197,.8) 30%, rgba(45,184,197,.3) 70%, transparent 100%);
-  }
-  .section-divider span {
-    flex-shrink: 0; display: flex; align-items: center; justify-content: center;
-    width: 28px; height: 28px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(201,168,76,.25) 0%, rgba(45,184,197,.1) 60%, transparent 100%);
-    border: 1px solid rgba(201,168,76,.5); color: var(--gold); font-size: 11px;
-    text-shadow: 0 0 8px rgba(201,168,76,.9);
-    box-shadow: 0 0 10px rgba(201,168,76,.3), 0 0 20px rgba(45,184,197,.15), inset 0 0 8px rgba(201,168,76,.1);
-    animation: divider-pulse 3s ease-in-out infinite;
-  }
-  @keyframes divider-pulse {
-    0%,100% { box-shadow: 0 0 10px rgba(201,168,76,.3), 0 0 20px rgba(45,184,197,.15); }
-    50%      { box-shadow: 0 0 18px rgba(201,168,76,.6), 0 0 35px rgba(45,184,197,.3); }
-  }
-  .footer-divider { position: relative; z-index: 1; padding: 0 20px; text-align: center; }
-  .footer-divider::before {
-    content: ''; display: block; height: 1px;
-    background: linear-gradient(90deg, transparent 0%, rgba(45,184,197,.4) 20%, rgba(201,168,76,.7) 50%, rgba(45,184,197,.4) 80%, transparent 100%);
-    box-shadow: 0 0 12px rgba(45,184,197,.2);
-  }
-  .footer-divider-icon {
-    display: inline-flex; align-items: center; gap: 12px; margin-top: -10px;
-    background: var(--black); padding: 0 20px;
-    font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 4px;
-    color: var(--gray); text-transform: uppercase;
-  }
-  .footer-divider-icon span { color: var(--gold); font-size: 14px; }
-
   /* ══════════════════════════════════════
      RESPONSIVE
   ══════════════════════════════════════ */
@@ -1032,7 +992,6 @@
      MANIFESTO
 ════════════════════════════════ -->
 <div class="section-divider"><span>✦</span></div>
-<div class="section-divider"><span>✦</span></div>
 <section id="manifesto">
   <div class="manifesto-inner">
     <span class="manifesto-eyeline reveal" data-es="Nuestra filosofía" data-en="Our philosophy">Nuestra filosofía</span>
@@ -1081,7 +1040,6 @@
      WHY SISLAND
 ════════════════════════════════ -->
 <div class="section-divider"><span>◈</span></div>
-<div class="section-divider"><span>◈</span></div>
 <section id="why">
   <div class="why-inner">
     <div class="why-statement reveal">
@@ -1127,7 +1085,6 @@
      PROCESS
 ════════════════════════════════ -->
 <div class="section-divider"><span>✦</span></div>
-<div class="section-divider"><span>✦</span></div>
 <section id="process">
   <div class="process-inner">
     <div class="section-header">
@@ -1171,7 +1128,6 @@
 <!-- ════════════════════════════════
      SERVICES
 ════════════════════════════════ -->
-<div class="section-divider"><span>◈</span></div>
 <div class="section-divider"><span>◈</span></div>
 <section id="services">
   <div class="services-inner">
@@ -1242,7 +1198,6 @@
      PACKAGES
 ════════════════════════════════ -->
 <div class="section-divider"><span>✦</span></div>
-<div class="section-divider"><span>◈</span></div>
 <section id="packages">
   <div class="packages-inner">
     <div class="section-header">
@@ -1336,7 +1291,6 @@
      CONTACT
 ════════════════════════════════ -->
 <div class="section-divider"><span>✦</span></div>
-<div class="section-divider"><span>✦</span></div>
 <section id="contact">
   <div class="contact-inner">
     <div class="section-header">
@@ -1412,9 +1366,6 @@
   <div class="footer-divider-icon">
     <span>✦</span> SISLAND <span>✦</span>
   </div>
-</div>
-<div class="footer-divider">
-  <div class="footer-divider-icon"><span>✦</span> SISLAND <span>✦</span></div>
 </div>
 <footer>
   <div class="footer-inner">
