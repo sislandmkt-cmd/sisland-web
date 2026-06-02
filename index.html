@@ -512,31 +512,34 @@
   .services-inner { max-width: 1200px; margin: 0 auto; padding: 0; }
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
-    gap: 18px; margin-top: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; margin-top: 60px;
+    align-items: stretch;
   }
   .services-grid { perspective: 1200px; }
   .svc-card {
     background: var(--card-bg); border: 1px solid var(--border);
-    border-radius: 8px; padding: 28px 22px; text-align: center;
+    border-radius: 10px; padding: 28px 22px 26px;
+    text-align: center;
+    display: flex; flex-direction: column; align-items: center;
     transition: transform .35s ease, box-shadow .35s ease, background .35s ease, border-color .35s ease;
     cursor: default; transform-style: preserve-3d; will-change: transform; position: relative;
   }
   .svc-card:hover {
     border-color: rgba(45,184,197,.5);
     background: rgba(45,184,197,.09);
-    transform: translateY(-10px) rotateX(6deg) rotateY(-3deg) scale(1.05);
-    box-shadow: 0 28px 56px rgba(45,184,197,.18), 0 0 0 1px rgba(45,184,197,.35),
-                inset 0 1px 0 rgba(45,184,197,.15);
+    transform: translateY(-8px) rotateX(4deg) rotateY(-2deg) scale(1.03);
+    box-shadow: 0 24px 48px rgba(45,184,197,.16), 0 0 0 1px rgba(45,184,197,.3),
+                inset 0 1px 0 rgba(45,184,197,.12);
   }
-  .svc-icon { font-size: 0; margin-bottom: 14px; display: flex; justify-content: center; align-items: center; height: 50px; }
-  .svc-icon svg { width: 46px; height: 46px; }
+  .svc-icon { font-size: 0; margin-bottom: 16px; display: flex; justify-content: center; align-items: center; height: 52px; flex-shrink: 0; }
+  .svc-icon svg { width: 44px; height: 44px; }
   .svc-card h4 {
-    font-family: 'Cinzel', serif; font-size: 13px; font-weight: 600;
-    color: var(--white); letter-spacing: .5px; line-height: 1.4;
-    margin-bottom: 8px;
+    font-family: 'Cinzel', serif; font-size: 12.5px; font-weight: 600;
+    color: var(--white); letter-spacing: .4px; line-height: 1.45;
+    margin-bottom: 10px; flex-shrink: 0;
   }
-  .svc-card p { font-size: 12px; color: var(--gray); line-height: 1.65; }
+  .svc-card p { font-size: 12px; color: var(--gray); line-height: 1.7; flex: 1; }
   .svc-special {
     border-color: var(--border-gold); position: relative;
     background: rgba(201,168,76,.04);
@@ -548,9 +551,9 @@
     display: flex !important;
     flex-direction: row !important;
     text-align: left !important;
-    gap: 20px;
-    align-items: flex-start;
-    padding: 24px 24px !important;
+    align-items: center !important;
+    gap: 24px;
+    padding: 26px 28px !important;
   }
   .svc-premium:hover {
     border-color: rgba(45,184,197,.8) !important;
@@ -559,8 +562,8 @@
     transform: translateY(-4px) !important;
   }
   .svc-premium-icons {
-    display: flex; flex-direction: column; gap: 8px;
-    align-items: center; flex-shrink: 0; padding-top: 4px;
+    display: flex; flex-direction: column; gap: 10px;
+    align-items: center; flex-shrink: 0;
   }
   .svc-premium-content { flex: 1; }
   .svc-premium-badge {
@@ -574,6 +577,32 @@
     margin-bottom: 8px;
   }
   .svc-premium p { font-size: 13px !important; }
+  .svc-paid-note {
+    font-size: 11px !important; color: var(--gray) !important;
+    font-style: italic; margin-top: 10px !important;
+    padding-top: 10px; border-top: 1px solid rgba(45,184,197,.15);
+  }
+  @media (max-width: 640px) {
+    .services-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+    .svc-premium { grid-column: span 2; flex-direction: column; align-items: flex-start !important; }
+    .svc-premium-icons { flex-direction: row; }
+  }
+  @media (max-width: 420px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .svc-premium { grid-column: span 1; }
+  }
+  .svc-special::before {
+    content: attr(data-badge);
+    position: absolute; top: -11px; left: 50%; transform: translateX(-50%);
+    background: var(--gold); color: var(--black);
+    font-size: 9px; font-weight: 800; letter-spacing: 1.5px;
+    padding: 3px 12px; border-radius: 20px; white-space: nowrap;
+  }
+  .svc-special:hover {
+    border-color: rgba(201,168,76,.5);
+    background: rgba(201,168,76,.07);
+  }
+  .svc-special h4 { color: var(--gold-light); }
   .svc-paid-note {
     font-size: 11px !important; color: var(--gray) !important;
     font-style: italic; margin-top: 10px !important;
@@ -712,6 +741,257 @@
   }
   .addon span { font-size: 13px; color: var(--gray); }
   .addon-price { font-weight: 700; color: var(--gold); font-size: 13px; margin-left: 10px; white-space: nowrap; }
+
+  /* ══════════════════════════════════════
+     IMAGEN PROFESIONAL — sección nueva
+  ══════════════════════════════════════ */
+  #imagen-pro {
+    padding: 0 20px 20px;
+  }
+  .imagen-pro-inner {
+    max-width: 1100px; margin: 0 auto;
+  }
+  .imagen-pro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 56px;
+  }
+  .ip-left {
+    padding: 52px 48px;
+    background: linear-gradient(135deg, #060d1c 0%, #0a1628 60%, #06101e 100%);
+    border-right: 1px solid var(--border);
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .ip-left::before {
+    content: '';
+    position: absolute; top: -60px; right: -60px;
+    width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(45,184,197,.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .ip-eyebrow {
+    font-size: 10px; font-weight: 700; letter-spacing: 5px;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
+  }
+  .ip-eyebrow::before {
+    content: ''; display: inline-block;
+    width: 28px; height: 1.5px; background: var(--gold);
+  }
+  .ip-headline {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(22px, 3vw, 36px);
+    font-weight: 900; color: var(--white);
+    line-height: 1.25; margin-bottom: 20px;
+  }
+  .ip-headline .teal { color: var(--teal); }
+  .ip-headline .gold { color: var(--gold); }
+  .ip-body {
+    font-size: 14px; color: var(--gray);
+    line-height: 1.8; margin-bottom: 36px; max-width: 420px;
+  }
+  .ip-body strong { color: var(--white); font-weight: 600; }
+  .ip-ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+  }
+  .ip-btn-primary {
+    display: inline-block;
+    background: var(--teal); color: var(--black);
+    font-family: 'Raleway', sans-serif; font-weight: 800;
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    padding: 13px 26px; border-radius: 4px; text-decoration: none;
+    transition: box-shadow .3s, transform .3s;
+  }
+  .ip-btn-primary:hover {
+    box-shadow: 0 0 30px rgba(45,184,197,.45);
+    transform: translateY(-2px);
+  }
+  .ip-btn-ghost {
+    display: inline-block;
+    border: 1px solid var(--border-gold); color: var(--gold);
+    font-family: 'Raleway', sans-serif; font-weight: 700;
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    padding: 13px 26px; border-radius: 4px; text-decoration: none;
+    transition: background .3s, transform .3s;
+  }
+  .ip-btn-ghost:hover {
+    background: rgba(201,168,76,.1);
+    transform: translateY(-2px);
+  }
+  .ip-right {
+    background: #070e1c;
+    display: flex; flex-direction: column;
+  }
+  .ip-service-row {
+    display: flex; align-items: flex-start; gap: 18px;
+    padding: 26px 32px;
+    border-bottom: 1px solid var(--border);
+    transition: background .25s;
+    cursor: default;
+  }
+  .ip-service-row:last-child { border-bottom: none; }
+  .ip-service-row:hover { background: rgba(45,184,197,.05); }
+  .ip-service-row.ip-row-premium:hover { background: rgba(201,168,76,.04); }
+  .ip-row-icon {
+    width: 38px; height: 38px; border-radius: 8px; flex-shrink: 0;
+    background: rgba(45,184,197,.1); border: 1px solid rgba(45,184,197,.2);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--teal); margin-top: 2px;
+  }
+  .ip-row-premium .ip-row-icon {
+    background: rgba(201,168,76,.1); border-color: rgba(201,168,76,.2);
+    color: var(--gold);
+  }
+  .ip-row-body {}
+  .ip-row-title {
+    font-family: 'Cinzel', serif; font-size: 12px; font-weight: 700;
+    color: var(--white); letter-spacing: .3px; margin-bottom: 4px;
+  }
+  .ip-row-premium .ip-row-title { color: var(--gold-light); }
+  .ip-row-desc {
+    font-size: 12px; color: var(--gray); line-height: 1.6; margin-bottom: 6px;
+  }
+  .ip-row-price {
+    font-size: 13px; font-weight: 700; color: var(--teal);
+  }
+  .ip-row-premium .ip-row-price { color: var(--gold); }
+  .ip-row-usd {
+    font-size: 10px; color: rgba(45,184,197,.5); margin-left: 6px; font-weight: 400;
+  }
+  .ip-row-premium .ip-row-usd { color: rgba(201,168,76,.5); }
+  @media (max-width: 760px) {
+    .imagen-pro-grid { grid-template-columns: 1fr; }
+    .ip-left { padding: 40px 28px; border-right: none; border-bottom: 1px solid var(--border); }
+    .ip-service-row { padding: 20px 22px; }
+  }
+
+  /* ══════════════════════════════════════
+     PRESENCIA DIGITAL — nueva sección
+  ══════════════════════════════════════ */
+  #presencia-digital {
+    padding: 0 20px 28px;
+  }
+  .presencia-inner { max-width: 1200px; margin: 0 auto; padding: 0; }
+  .presencia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 60px;
+    align-items: stretch;
+  }
+  .pd-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 32px 26px 28px;
+    display: flex; flex-direction: column;
+    position: relative;
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease, background .35s ease;
+    cursor: default;
+  }
+  .pd-card:hover {
+    border-color: rgba(45,184,197,.5);
+    background: rgba(45,184,197,.07);
+    transform: translateY(-8px);
+    box-shadow: 0 24px 56px rgba(45,184,197,.15), 0 0 0 1px rgba(45,184,197,.3);
+  }
+  .pd-card.pd-featured {
+    border-color: rgba(45,184,197,.45);
+    box-shadow: 0 0 50px rgba(45,184,197,.1);
+  }
+  .pd-card.pd-premium {
+    border-color: rgba(138,101,212,.35);
+    background: rgba(138,101,212,.04);
+  }
+  .pd-card.pd-premium:hover {
+    border-color: rgba(138,101,212,.6);
+    background: rgba(138,101,212,.09);
+    box-shadow: 0 24px 56px rgba(138,101,212,.15), 0 0 0 1px rgba(138,101,212,.3);
+  }
+  .pd-top-badge {
+    position: absolute; top: -11px; left: 50%; transform: translateX(-50%);
+    font-size: 9px; font-weight: 800; letter-spacing: 1.5px;
+    padding: 3px 14px; border-radius: 20px; white-space: nowrap;
+  }
+  .pd-badge-gancho { background: var(--card-bg); border: 1px solid var(--teal); color: var(--teal); }
+  .pd-badge-popular { background: var(--teal); color: var(--black); }
+  .pd-badge-premium { background: rgba(138,101,212,.2); border: 1px solid rgba(138,101,212,.5); color: #b899f5; }
+  .pd-icon {
+    width: 44px; height: 44px; border-radius: 8px;
+    background: rgba(45,184,197,.1); border: 1px solid rgba(45,184,197,.2);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 18px; color: var(--teal);
+  }
+  .pd-card.pd-premium .pd-icon {
+    background: rgba(138,101,212,.1); border-color: rgba(138,101,212,.25);
+  }
+  .pd-card h4 {
+    font-family: 'Cinzel', serif; font-size: 13px; font-weight: 700;
+    color: var(--white); letter-spacing: .5px; line-height: 1.4; margin-bottom: 8px;
+  }
+  .pd-card.pd-premium h4 { color: #c4b5fd; }
+  .pd-desc {
+    font-size: 12px; color: var(--gray); line-height: 1.65; margin-bottom: 20px; flex: 1;
+  }
+  .pd-divider {
+    border: none; border-top: 1px solid var(--border); margin-bottom: 16px;
+  }
+  .pd-price-mxn {
+    font-family: 'Cinzel', serif; font-size: 28px; font-weight: 900;
+    color: var(--teal); line-height: 1; margin-bottom: 2px;
+  }
+  .pd-card.pd-premium .pd-price-mxn { color: #a78bfa; }
+  .pd-price-period { font-size: 11px; color: var(--gray); margin-bottom: 2px; }
+  .pd-price-usd { font-size: 11px; color: rgba(45,184,197,.5); margin-bottom: 14px; }
+  .pd-card.pd-premium .pd-price-usd { color: rgba(138,101,212,.6); }
+  .pd-extra {
+    font-size: 11px; color: var(--teal); font-weight: 600;
+    margin-bottom: 16px; display: flex; align-items: center; gap: 5px;
+  }
+  .pd-card.pd-premium .pd-extra { color: #b899f5; }
+  .pd-features {
+    list-style: none; margin-bottom: 24px;
+  }
+  .pd-features li {
+    font-size: 12px; color: var(--gray);
+    padding: 5px 0; display: flex; align-items: flex-start; gap: 8px;
+    border-bottom: 1px solid rgba(45,184,197,.05);
+  }
+  .pd-features li::before {
+    content: '✦'; color: var(--teal); font-size: 8px;
+    flex-shrink: 0; margin-top: 3px;
+  }
+  .pd-card.pd-premium .pd-features li::before { color: #a78bfa; }
+  .pd-cta {
+    display: block; text-align: center; padding: 12px;
+    border: 1px solid var(--teal); color: var(--teal);
+    font-family: 'Raleway', sans-serif; font-weight: 700;
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    text-decoration: none; border-radius: 4px; transition: all .3s;
+    margin-top: auto;
+  }
+  .pd-cta:hover { background: var(--teal); color: var(--black); box-shadow: 0 0 24px rgba(45,184,197,.3); }
+  .pd-card.pd-featured .pd-cta { background: var(--teal); color: var(--black); }
+  .pd-card.pd-featured .pd-cta:hover { box-shadow: 0 0 30px rgba(45,184,197,.4); }
+  .pd-card.pd-premium .pd-cta {
+    border-color: rgba(138,101,212,.5); color: #b899f5;
+  }
+  .pd-card.pd-premium .pd-cta:hover {
+    background: rgba(138,101,212,.2); color: #c4b5fd;
+    box-shadow: 0 0 24px rgba(138,101,212,.3);
+  }
+  .pd-note {
+    font-size: 11px; color: rgba(45,184,197,.45);
+    text-align: center; margin-top: 28px; letter-spacing: .5px;
+  }
+  @media (max-width: 600px) {
+    .presencia-grid { grid-template-columns: 1fr; }
+  }
 
   /* ══════════════════════════════════════
      CONTACT
@@ -983,6 +1263,7 @@
   </a>
   <ul class="nav-links">
     <li><a href="#services" data-es="Servicios" data-en="Services">Servicios</a></li>
+    <li><a href="#presencia-digital" data-es="Presencia Digital" data-en="Digital Presence">Presencia Digital</a></li>
     <li><a href="#packages" data-es="Paquetes" data-en="Packages">Paquetes</a></li>
     <li><a href="#process" data-es="Proceso" data-en="Process">Proceso</a></li>
     <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
@@ -1027,6 +1308,93 @@
     <div class="hero-badge"><div class="dot"></div><span data-es="100% Remoto" data-en="100% Remote">100% Remoto</span></div>
     <div class="hero-badge"><div class="dot"></div><span data-es="Entrega Rápida" data-en="Fast Delivery">Entrega Rápida</span></div>
     <div class="hero-badge"><div class="dot"></div><span data-es=" ES / EN" data-en=" ES / EN"> ES / EN</span></div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     IMAGEN PROFESIONAL
+════════════════════════════════ -->
+<div class="section-divider"><span>◈</span></div>
+<section id="imagen-pro">
+  <div class="imagen-pro-inner">
+    <div class="section-header">
+      <div class="section-label reveal" data-es="Para ti" data-en="For you">Para ti</div>
+      <h2 class="section-title reveal">
+        <span data-es="Haz que tu imagen" data-en="Make your image">Haz que tu imagen</span><br>
+        <span class="teal" data-es="hable antes que tú." data-en="speaks before you do.">hable antes que tú.</span>
+      </h2>
+      <p class="section-sub reveal" data-es="Tanto si buscas tu próximo gran cliente como tu próximo gran empleo — tu imagen digital es tu primera carta de presentación." data-en="Whether you're looking for your next big client or your next big job — your digital image is your first impression.">Tanto si buscas tu próximo gran cliente como tu próximo gran empleo — tu imagen digital es tu primera carta de presentación.</p>
+    </div>
+
+    <div class="imagen-pro-grid reveal">
+
+      <!-- IZQUIERDA: copy -->
+      <div class="ip-left">
+        <span class="ip-eyebrow">Imagen · Identidad · Autoridad</span>
+        <h2 class="ip-headline">
+          Tu perfil de LinkedIn<br>
+          es tu <span class="teal">nuevo CV.</span><br>
+          <span class="gold">¿Ya está listo?</span>
+        </h2>
+        <p class="ip-body">
+          Hoy los reclutadores, socios y clientes te buscan en Google y LinkedIn <strong>antes de contestar tu mensaje.</strong> Si tu perfil no comunica quién eres y qué ofreces en los primeros tres segundos, <strong>ya perdiste esa oportunidad.</strong><br><br>
+          En SISLAND transformamos tu presencia digital en una herramienta que trabaja por ti — las 24 horas, desde cualquier lugar.
+        </p>
+        <div class="ip-ctas">
+          <a href="https://wa.me/5215542983904?text=Hola%20SISLAND%2C%20quiero%20mejorar%20mi%20imagen%20profesional" target="_blank" class="ip-btn-primary" data-es="Quiero mejorar mi imagen" data-en="I want to improve my image">Quiero mejorar mi imagen</a>
+          <a href="#presencia-digital" class="ip-btn-ghost" data-es="Ver servicios →" data-en="See services →">Ver servicios →</a>
+        </div>
+      </div>
+
+      <!-- DERECHA: servicios con precio -->
+      <div class="ip-right">
+
+        <div class="ip-service-row">
+          <div class="ip-row-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>
+          </div>
+          <div class="ip-row-body">
+            <p class="ip-row-title" data-es="Identidad Digital Esencial" data-en="Essential Digital Identity">Identidad Digital Esencial</p>
+            <p class="ip-row-desc" data-es="Tu tarjeta de presentación en PDF con botones a WhatsApp, redes y ubicación." data-en="Your business card in PDF with buttons to WhatsApp, social media and location.">Tu tarjeta de presentación en PDF con botones a WhatsApp, redes y ubicación.</p>
+            <span class="ip-row-price">$499 MXN <span class="ip-row-usd">≈ USD $35</span></span>
+          </div>
+        </div>
+
+        <div class="ip-service-row">
+          <div class="ip-row-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="3"/><path d="M2 8h20"/><circle cx="5.5" cy="5.5" r="1" fill="currentColor"/><circle cx="8.5" cy="5.5" r="1" fill="currentColor"/></svg>
+          </div>
+          <div class="ip-row-body">
+            <p class="ip-row-title" data-es="Presencia Web Ejecutiva" data-en="Executive Web Presence">Presencia Web Ejecutiva</p>
+            <p class="ip-row-desc" data-es="Página de presentación profesional en internet con link propio — botones a WhatsApp, redes y LinkedIn." data-en="Professional presentation page online with its own link — buttons to WhatsApp, social media and LinkedIn.">Página de presentación profesional en internet con link propio — botones a WhatsApp, redes y LinkedIn.</p>
+            <span class="ip-row-price">$3,000 MXN <span class="ip-row-usd">≈ USD $200</span></span>
+          </div>
+        </div>
+
+        <div class="ip-service-row">
+          <div class="ip-row-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div class="ip-row-body">
+            <p class="ip-row-title" data-es="Perfil de Autoridad LinkedIn" data-en="LinkedIn Authority Profile">Perfil de Autoridad LinkedIn</p>
+            <p class="ip-row-desc" data-es="Optimizamos tu LinkedIn para que clientes y reclutadores te encuentren primero." data-en="We optimize your LinkedIn so clients and recruiters find you first.">Optimizamos tu LinkedIn para que clientes y reclutadores te encuentren primero.</p>
+            <span class="ip-row-price">$3,500 MXN <span class="ip-row-usd">≈ USD $240</span></span>
+          </div>
+        </div>
+
+        <div class="ip-service-row ip-row-premium">
+          <div class="ip-row-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+          </div>
+          <div class="ip-row-body">
+            <p class="ip-row-title" data-es="Kit de Posicionamiento Ejecutivo ★" data-en="Executive Positioning Kit ★">Kit de Posicionamiento Ejecutivo ★</p>
+            <p class="ip-row-desc" data-es="LinkedIn optimizado + CV profesional. La misma impresión en internet y en papel." data-en="Optimized LinkedIn + professional CV. The same impression online and on paper.">LinkedIn optimizado + CV profesional. La misma impresión en internet y en papel.</p>
+            <span class="ip-row-price">$4,800 MXN <span class="ip-row-usd">≈ USD $300</span></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1256,7 +1624,155 @@
         <h4 data-es="Identidad de Marca Completa" data-en="Complete Brand Identity">Identidad de Marca Completa</h4>
         <p data-es="Logo · Paleta · Tipografías · Slogan · Guía de uso · Kit de redes · Tarjeta digital QR." data-en="Logo · Color palette · Fonts · Slogan · Usage guide · Social kit · QR digital card.">Logo · Paleta · Tipografías · Slogan · Guía de uso · Kit de redes · Tarjeta digital QR.</p>
       </div>
+
+      <!-- 12. Identidad Digital Esencial -->
+      <div class="svc-card reveal">
+        <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" stroke="#2db8c5" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 2v6h6" stroke="#2db8c5" stroke-width="1.5"/><path d="M9 13h6M9 17h4" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <h4 data-es="Identidad Digital Esencial" data-en="Essential Digital Identity">Identidad Digital Esencial</h4>
+        <p data-es="Tarjeta de presentación en PDF con botones que abren tu WhatsApp, redes y ubicación al instante. Se comparte por mensaje, sin necesitar página web." data-en="Presentation card in PDF with buttons that open your WhatsApp, social media and location instantly. Shared by message, no website needed.">Tarjeta de presentación en PDF con botones que abren tu WhatsApp, redes y ubicación al instante. Se comparte por mensaje, sin necesitar página web.</p>
+      </div>
+
+      <!-- 13. Presencia Web Ejecutiva -->
+      <div class="svc-card reveal">
+        <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="20" height="18" rx="3" stroke="#2db8c5" stroke-width="1.5"/><path d="M2 8h20" stroke="#2db8c5" stroke-width="1.5"/><circle cx="5.5" cy="5.5" r="1" fill="#c9a84c"/><circle cx="8.5" cy="5.5" r="1" fill="#2db8c5"/><path d="M7 14h10M7 17h6" stroke="#2db8c5" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        <h4 data-es="Presencia Web Ejecutiva" data-en="Executive Web Presence">Presencia Web Ejecutiva</h4>
+        <p data-es="Tu página de presentación profesional en internet con link propio — botones a WhatsApp, redes y LinkedIn. Se abre en el navegador, se ve perfecta en cualquier dispositivo." data-en="Your professional presentation page on the internet with its own link — buttons to WhatsApp, social media and LinkedIn. Opens in the browser, looks perfect on any device.">Tu página de presentación profesional en internet con link propio — botones a WhatsApp, redes y LinkedIn. Se abre en el navegador, se ve perfecta en cualquier dispositivo.</p>
+      </div>
+
+      <!-- 14. Perfil de Autoridad LinkedIn -->
+      <div class="svc-card reveal">
+        <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" stroke="#2db8c5" stroke-width="1.5" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="#2db8c5" stroke-width="1.5"/><circle cx="4" cy="4" r="2" stroke="#c9a84c" stroke-width="1.5"/></svg></span>
+        <h4 data-es="Perfil de Autoridad LinkedIn" data-en="LinkedIn Authority Profile">Perfil de Autoridad LinkedIn</h4>
+        <p data-es="Optimizamos tu perfil para que clientes y socios te encuentren primero. Redacción estratégica, banner corporativo y posicionamiento B2B." data-en="We optimize your profile so clients and partners find you first. Strategic copy, corporate banner and B2B positioning.">Optimizamos tu perfil para que clientes y socios te encuentren primero. Redacción estratégica, banner corporativo y posicionamiento B2B.</p>
+      </div>
+
+      <!-- 15. Kit de Posicionamiento Ejecutivo PREMIUM -->
+      <div class="svc-card svc-premium reveal">
+        <div class="svc-premium-icons">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z" stroke="#2db8c5" stroke-width="1.5" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="#2db8c5" stroke-width="1.5"/><circle cx="4" cy="4" r="2" stroke="#2db8c5" stroke-width="1.5"/></svg>
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" stroke="#c9a84c" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 2v6h6" stroke="#c9a84c" stroke-width="1.5"/><path d="M9 13h6M9 17h4" stroke="#c9a84c" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="svc-premium-content">
+          <div class="svc-premium-badge" data-es="★ SERVICIO PREMIUM" data-en="★ PREMIUM SERVICE">★ SERVICIO PREMIUM</div>
+          <h4 data-es="Kit de Posicionamiento Ejecutivo" data-en="Executive Positioning Kit">Kit de Posicionamiento Ejecutivo</h4>
+          <p data-es="LinkedIn optimizado + CV profesional redactado desde cero. Ambos alineados con el mismo tono de marca — la misma impresión en internet y en papel." data-en="Optimized LinkedIn + professional CV written from scratch. Both aligned with the same brand tone — the same impression online and on paper.">LinkedIn optimizado + CV profesional redactado desde cero. Ambos alineados con el mismo tono de marca — la misma impresión en internet y en papel.</p>
+        </div>
+      </div>
+
     </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     PRESENCIA DIGITAL
+════════════════════════════════ -->
+<div class="section-divider"><span>◈</span></div>
+<section id="presencia-digital">
+  <div class="presencia-inner">
+    <div class="section-header">
+      <div class="section-label reveal" data-es="Presencia Digital" data-en="Digital Presence">Presencia Digital</div>
+      <h2 class="section-title reveal">
+        <span data-es="Identidad Digital" data-en="Digital Identity">Identidad Digital</span> <span class="teal" data-es="Profesional" data-en="Professional">Profesional</span>
+      </h2>
+      <p class="section-sub reveal" data-es="Tu imagen en el mundo digital — desde el primer contacto hasta la autoridad ejecutiva." data-en="Your image in the digital world — from first contact to executive authority.">Tu imagen en el mundo digital — desde el primer contacto hasta la autoridad ejecutiva.</p>
+    </div>
+
+    <div class="presencia-grid">
+
+      <!-- 1. Identidad Digital Esencial -->
+      <div class="pd-card reveal">
+        <span class="pd-top-badge pd-badge-gancho">GANCHO · ENTRADA</span>
+        <div class="pd-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>
+        </div>
+        <h4 data-es="Identidad Digital Esencial" data-en="Essential Digital Identity">Identidad Digital Esencial</h4>
+        <p class="pd-desc" data-es="Un archivo PDF con tu información profesional y botones que, al tocarlos, abren directamente tu WhatsApp, redes sociales y ubicación. Se envía por WhatsApp o correo — sin necesidad de internet ni página web." data-en="A PDF file with your professional info and buttons that open your WhatsApp, social media and location directly. Shared via WhatsApp or email — no internet or website needed.">Un archivo PDF con tu información profesional y botones que, al tocarlos, abren directamente tu WhatsApp, redes sociales y ubicación. Se envía por WhatsApp o correo — sin necesidad de internet ni página web.</p>
+        <hr class="pd-divider">
+        <div class="pd-price-mxn">$499</div>
+        <p class="pd-price-period" data-es="MXN · pago único" data-en="MXN · one-time payment">MXN · pago único</p>
+        <p class="pd-price-usd">≈ USD $35</p>
+        <p class="pd-extra">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span data-es="Entrega en 24–48 hrs" data-en="Delivery in 24–48 hrs">Entrega en 24–48 hrs</span>
+        </p>
+        <ul class="pd-features">
+          <li data-es="Diseño corporativo personalizado" data-en="Custom corporate design">Diseño corporativo personalizado</li>
+          <li data-es="Botones interactivos con hipervínculos" data-en="Interactive buttons with hyperlinks">Botones interactivos con hipervínculos</li>
+          <li data-es="Optimizado para compartir por WhatsApp" data-en="Optimized for WhatsApp sharing">Optimizado para compartir por WhatsApp</li>
+          <li data-es="Uso ilimitado · sin hosting requerido" data-en="Unlimited use · no hosting required">Uso ilimitado · sin hosting requerido</li>
+        </ul>
+        <a href="https://wa.me/5215542983904?text=Hola%20SISLAND%2C%20me%20interesa%20la%20Identidad%20Digital%20Esencial" target="_blank" class="pd-cta" data-es="Quiero esta tarjeta" data-en="I want this card">Quiero esta tarjeta</a>
+      </div>
+
+      <!-- 2. Presencia Web Ejecutiva -->
+      <div class="pd-card pd-featured reveal">
+        <span class="pd-top-badge pd-badge-popular">MÁS SOLICITADO</span>
+        <div class="pd-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="3"/><path d="M2 8h20"/><circle cx="5.5" cy="5.5" r="1" fill="currentColor"/><circle cx="8.5" cy="5.5" r="1" fill="currentColor"/></svg>
+        </div>
+        <h4 data-es="Presencia Web Ejecutiva" data-en="Executive Web Presence">Presencia Web Ejecutiva</h4>
+        <p class="pd-desc" data-es="Una página de presentación profesional en internet con tu propio link — no es un sitio completo, es una pantalla elegante con botones a WhatsApp, redes sociales y LinkedIn. Se abre en el navegador sin descargar nada, se ve perfecta en cualquier dispositivo y puedes actualizar tu información cuando quieras." data-en="A professional presentation page on the internet with its own link — not a full website, but an elegant screen with buttons to WhatsApp, social media and LinkedIn. Opens in the browser without downloading anything, looks perfect on any device, and you can update your info whenever you want.">Una página de presentación profesional en internet con tu propio link — no es un sitio completo, es una pantalla elegante con botones a WhatsApp, redes sociales y LinkedIn. Se abre en el navegador sin descargar nada, se ve perfecta en cualquier dispositivo y puedes actualizar tu información cuando quieras.</p>
+        <hr class="pd-divider">
+        <div class="pd-price-mxn">$3,000</div>
+        <p class="pd-price-period" data-es="MXN · desarrollo" data-en="MXN · development">MXN · desarrollo</p>
+        <p class="pd-price-usd">≈ USD $200</p>
+        <p class="pd-extra">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M21.5 2l-11 11M21.5 2H15M21.5 2V8M10 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-5"/></svg>
+          <span data-es="Renovación anual $800 MXN (≈ $46 USD) — para mantenerla activa" data-en="Annual renewal $800 MXN (≈ $46 USD) — to keep it active">Renovación anual $800 MXN (≈ $46 USD) — para mantenerla activa</span>
+        </p>
+        <ul class="pd-features">
+          <li data-es="Diseño 100% personalizado con tu imagen de marca" data-en="100% custom design with your brand identity">Diseño 100% personalizado con tu imagen de marca</li>
+          <li data-es="Botones directos a WhatsApp, redes sociales y LinkedIn" data-en="Direct buttons to WhatsApp, social media and LinkedIn">Botones directos a WhatsApp, redes sociales y LinkedIn</li>
+          <li data-es="Link propio para compartir por WhatsApp, correo o QR" data-en="Own link to share via WhatsApp, email or QR">Link propio para compartir por WhatsApp, correo o QR</li>
+          <li data-es="Estadísticas: sabrás cuántas personas la visitaron" data-en="Stats: you'll know how many people visited it">Estadísticas: sabrás cuántas personas la visitaron</li>
+          <li data-es="Hosting incluido — sin costos ocultos el primer año" data-en="Hosting included — no hidden costs the first year">Hosting incluido — sin costos ocultos el primer año</li>
+        </ul>
+        <a href="https://wa.me/5215542983904?text=Hola%20SISLAND%2C%20me%20interesa%20la%20Presencia%20Web%20Ejecutiva" target="_blank" class="pd-cta" data-es="Quiero este servicio" data-en="I want this service">Quiero este servicio</a>
+      </div>
+
+      <!-- 3. Perfil de Autoridad LinkedIn -->
+      <div class="pd-card reveal">
+        <div class="pd-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </div>
+        <h4 data-es="Perfil de Autoridad LinkedIn" data-en="LinkedIn Authority Profile">Perfil de Autoridad LinkedIn</h4>
+        <p class="pd-desc" data-es="Transformamos tu perfil de LinkedIn en una herramienta de ventas. Redactamos tu descripción con las palabras clave que buscan tus clientes, diseñamos tu banner corporativo y optimizamos cada sección para que aparezcas primero cuando alguien busca lo que tú ofreces." data-en="We transform your LinkedIn profile into a sales tool. We write your description with the keywords your clients search for, design your corporate banner and optimize every section so you appear first when someone searches for what you offer.">Transformamos tu perfil de LinkedIn en una herramienta de ventas. Redactamos tu descripción con las palabras clave que buscan tus clientes, diseñamos tu banner corporativo y optimizamos cada sección para que aparezcas primero cuando alguien busca lo que tú ofreces.</p>
+        <hr class="pd-divider">
+        <div class="pd-price-mxn">$3,500</div>
+        <p class="pd-price-period" data-es="MXN · pago único" data-en="MXN · one-time payment">MXN · pago único</p>
+        <p class="pd-price-usd">≈ USD $240</p>
+        <ul class="pd-features">
+          <li data-es="Diagnóstico y auditoría del perfil actual" data-en="Diagnosis and audit of current profile">Diagnóstico y auditoría del perfil actual</li>
+          <li data-es="Redacción estratégica con keywords B2B" data-en="Strategic copy with B2B keywords">Redacción estratégica con keywords B2B</li>
+          <li data-es="Diseño de banner corporativo" data-en="Corporate banner design">Diseño de banner corporativo</li>
+          <li data-es="Optimización de experiencia y habilidades" data-en="Experience and skills optimization">Optimización de experiencia y habilidades</li>
+        </ul>
+        <a href="https://wa.me/5215542983904?text=Hola%20SISLAND%2C%20me%20interesa%20el%20Perfil%20de%20Autoridad%20LinkedIn" target="_blank" class="pd-cta" data-es="Quiero este servicio" data-en="I want this service">Quiero este servicio</a>
+      </div>
+
+      <!-- 4. Kit de Posicionamiento Ejecutivo -->
+      <div class="pd-card pd-premium reveal">
+        <span class="pd-top-badge pd-badge-premium">PREMIUM</span>
+        <div class="pd-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b899f5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <h4 data-es="Kit de Posicionamiento Ejecutivo" data-en="Executive Positioning Kit">Kit de Posicionamiento Ejecutivo</h4>
+        <p class="pd-desc" data-es="Todo lo del Perfil de Autoridad LinkedIn más tu CV profesional redactado desde cero. Ambos documentos alineados con el mismo mensaje y tono de marca — para que causes la misma impresión en internet que en papel." data-en="Everything in the LinkedIn Authority Profile plus your professional CV written from scratch. Both documents aligned with the same message and brand tone — so you make the same impression online as on paper.">Todo lo del Perfil de Autoridad LinkedIn más tu CV profesional redactado desde cero. Ambos documentos alineados con el mismo mensaje y tono de marca — para que causes la misma impresión en internet que en papel.</p>
+        <hr class="pd-divider">
+        <div class="pd-price-mxn">$4,800</div>
+        <p class="pd-price-period" data-es="MXN · pago único" data-en="MXN · one-time payment">MXN · pago único</p>
+        <p class="pd-price-usd">≈ USD $300</p>
+        <ul class="pd-features">
+          <li data-es="Todo lo del Perfil de Autoridad LinkedIn" data-en="Everything in LinkedIn Authority Profile">Todo lo del Perfil de Autoridad LinkedIn</li>
+          <li data-es="CV profesional optimizado (PDF + Word)" data-en="Optimized professional CV (PDF + Word)">CV profesional optimizado (PDF + Word)</li>
+          <li data-es="Copy alineado entre LinkedIn y CV" data-en="Aligned copy between LinkedIn and CV">Copy alineado entre LinkedIn y CV</li>
+          <li data-es="Sesión de revisión incluida" data-en="Review session included">Sesión de revisión incluida</li>
+        </ul>
+        <a href="https://wa.me/5215542983904?text=Hola%20SISLAND%2C%20me%20interesa%20el%20Kit%20de%20Posicionamiento%20Ejecutivo" target="_blank" class="pd-cta" data-es="Quiero este kit" data-en="I want this kit">Quiero este kit</a>
+      </div>
+
+    </div>
+    <p class="pd-note reveal" data-es="Precios en MXN · Equivalencia USD referencial · Factura RESICO disponible" data-en="Prices in MXN · USD reference only · RESICO invoice available">Precios en MXN · Equivalencia USD referencial · Factura RESICO disponible</p>
   </div>
 </section>
 
@@ -1464,7 +1980,9 @@
           <li><a href="#services" data-es="Landing Pages" data-en="Landing Pages">Landing Pages</a></li>
           <li><a href="#services" data-es="Redes Sociales" data-en="Social Media">Redes Sociales</a></li>
           <li><a href="#services" data-es="Identidad de Marca" data-en="Brand Identity">Identidad de Marca</a></li>
-          <li><a href="#services" data-es="Tarjeta Digital + QR" data-en="Digital Card + QR">Tarjeta Digital + QR</a></li>
+          <li><a href="#presencia-digital" data-es="Tarjeta Digital + QR" data-en="Digital Card + QR">Tarjeta Digital + QR</a></li>
+          <li><a href="#presencia-digital" data-es="Presencia Web Ejecutiva" data-en="Executive Web Presence">Presencia Web Ejecutiva</a></li>
+          <li><a href="#presencia-digital" data-es="LinkedIn — Autoridad Digital" data-en="LinkedIn — Digital Authority">LinkedIn — Autoridad Digital</a></li>
           <li><a href="#services" data-es="Google Business — Asesoría" data-en="Google Business — Consulting">Google Business — Asesoría</a></li>
           <li><a href="#services" data-es="Automatizaciones" data-en="Automations">Automatizaciones</a></li>
         </ul>
