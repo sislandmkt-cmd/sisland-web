@@ -85,7 +85,6 @@
     backdrop-filter: blur(24px);
     background: rgba(5,8,16,0.75);
     border-bottom: 1px solid var(--border);
-    isolation: isolate;
   }
   .nav-logo {
     display: flex; align-items: center; gap: 12px; text-decoration: none;
@@ -189,7 +188,6 @@
     align-items: center; justify-content: center;
     text-align: center; padding: 100px 20px 48px;
     position: relative; overflow: hidden;
-    isolation: isolate;
   }
   .hero-glow {
     position: absolute; width: 700px; height: 700px; border-radius: 50%;
@@ -218,7 +216,6 @@
   .hero-logo-wrap {
     margin-bottom: 36px;
     animation: fadeDown 1s ease both;
-    isolation: isolate;
   }
   .hero-logo-wrap img {
     height: 110px; width: auto;
@@ -886,7 +883,7 @@
     display: grid; grid-template-columns: 1.6fr 1fr 1fr;
     gap: 56px; margin-bottom: 48px;
   }
-  .footer-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; isolation: isolate; }
+  .footer-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
   .footer-logo img { height: 42px; mix-blend-mode: screen; filter: drop-shadow(0 0 10px rgba(45,184,197,.3)); }
   .footer-logo-text { font-family: 'Cinzel', serif; font-size: 16px; color: var(--teal); letter-spacing: 3px; }
   .footer-brand p { font-size: 13px; color: var(--gray); line-height: 1.75; max-width: 280px; }
