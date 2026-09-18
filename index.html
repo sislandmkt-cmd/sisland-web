@@ -15,8 +15,8 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
-<title>SISLAND | Agencia de Presencia Digital</title>
-<meta name="description" content="Agencia de Presencia Digital. Página web profesional, campañas Meta Ads y Google Ads con segmentación inteligente, identidad de marca y automatizaciones. 100% remoto. México y USA.">
+<title>SISLAND | Soluciones Integrales — México & USA</title>
+<meta name="description" content="Soluciones integrales para tu negocio: página web profesional, campañas Meta Ads y Google Ads, desarrollo de software personalizado e identidad de marca. 100% remoto. México y USA.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -914,35 +914,8 @@
   #particle-canvas {
     position: fixed; inset: 0;
     pointer-events: none; z-index: 0;
-    opacity: 0.45;
+    opacity: 0.22;
   }
-
-  /* ══════════════════════════════════════
-     MUSIC BUTTON
-  ══════════════════════════════════════ */
-  #music-btn {
-    position: fixed; bottom: 24px; right: 88px; z-index: 1200;
-    width: 45px; height: 45px; border-radius: 50%;
-    background: var(--card-bg); border: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer; transition: all .3s;
-  }
-  #music-btn:hover { border-color: var(--teal); box-shadow: 0 0 24px rgba(45,184,197,.3); }
-  #music-btn .bars { display: flex; align-items: flex-end; gap: 3px; height: 16px; }
-  #music-btn .bar { width: 3px; background: var(--teal); border-radius: 2px; animation: bar-bounce 1s ease-in-out infinite; }
-  #music-btn .bar:nth-child(1) { height: 6px; animation-delay: 0s; }
-  #music-btn .bar:nth-child(2) { height: 14px; animation-delay: .15s; }
-  #music-btn .bar:nth-child(3) { height: 9px; animation-delay: .3s; }
-  #music-btn .bar:nth-child(4) { height: 16px; animation-delay: .45s; }
-  #music-btn.paused .bar { animation-play-state: paused; height: 4px !important; }
-  @keyframes bar-bounce { 0%,100% { height: 4px; } 50% { height: 16px; } }
-  #music-label {
-    position: fixed; bottom: 78px; right: 82px; z-index: 1200;
-    background: rgba(10,15,30,.95); border: 1px solid var(--border);
-    border-radius: 8px; padding: 6px 12px; font-size: 11px; color: var(--white);
-    opacity: 0; transition: opacity .3s; pointer-events: none; white-space: nowrap;
-  }
-  #music-btn:hover ~ #music-label { opacity: 1; }
 
   /* TYPEWRITER */
   .typewriter { border-right: 2px solid var(--teal); white-space: nowrap; overflow: hidden; }
@@ -984,17 +957,6 @@
 <!-- PARTICLE CANVAS -->
 <canvas id="particle-canvas"></canvas>
 
-<!-- MUSIC BUTTON -->
-<div id="music-btn" class="paused" onclick="toggleMusic()" title="Música ambient tech">
-  <div class="bars">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-</div>
-<div id="music-label">Música ambient tech</div>
-
 <!-- FACEBOOK FLOAT BUTTON -->
 <a id="fb-float" href="https://www.facebook.com/SislandAgenciaDePresenciaDigital/" target="_blank" aria-label="Facebook">
   <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -1022,12 +984,11 @@
   <a href="#hero" class="nav-logo">
     <img src="LogoRec.png" alt="SISLAND Logo">
     <div>
-      <div class="nav-tagline" data-es="Agencia de Presencia Digital" data-en="Digital Presence Agency">Agencia de Presencia Digital</div>
+      <div class="nav-tagline" data-es="Soluciones Integrales" data-en="Integrated Solutions">Soluciones Integrales</div>
     </div>
   </a>
   <ul class="nav-links">
     <li><a href="#services" data-es="Servicios" data-en="Services">Servicios</a></li>
-    <li><a href="#bundles" data-es="Soluciones" data-en="Solutions">Soluciones</a></li>
     <li><a href="#process" data-es="Proceso" data-en="Process">Proceso</a></li>
     <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
   </ul>
@@ -1045,7 +1006,7 @@
     <img src="LogoRec.png" alt="SISLAND">
   </div>
 
-  <p class="hero-supertag" data-es="Agencia de Presencia Digital · México & USA" data-en="Digital Presence Agency · Mexico & USA">Agencia de Presencia Digital · México & USA</p>
+  <p class="hero-supertag" data-es="Soluciones Integrales · México & USA" data-en="Integrated Solutions · Mexico & USA">Soluciones Integrales · México & USA</p>
 
   <h1 class="hero-title">
     <span data-es="Tu negocio existe." data-en="Your business is real." id="tw-line">Tu negocio existe.</span><br>
@@ -1053,14 +1014,14 @@
   </h1>
 
   <p class="hero-subtitle">
-    <span data-es="Creamos ecosistemas digitales completos para negocios como el tuyo —" data-en="We build complete digital ecosystems for businesses like yours —">Creamos ecosistemas digitales completos para negocios como el tuyo —</span>
-    <strong data-es="página web profesional, campañas en Meta Ads y Google Ads con segmentación inteligente, identidad de marca y automatizaciones." data-en="professional website, Meta Ads & Google Ads campaigns with smart targeting, brand identity, and automation.">página web profesional, campañas en Meta Ads y Google Ads con segmentación inteligente, identidad de marca y automatizaciones.</strong>
+    <span data-es="Diseñamos, programamos y conectamos las piezas digitales que tu negocio necesita —" data-en="We design, program and connect the digital pieces your business needs —">Diseñamos, programamos y conectamos las piezas digitales que tu negocio necesita —</span>
+    <strong data-es="desarrollo de software personalizado, página web profesional, campañas en Meta Ads y Google Ads con segmentación inteligente, e identidad de marca." data-en="custom software development, professional website, Meta Ads & Google Ads campaigns with smart targeting, and brand identity.">desarrollo de software personalizado, página web profesional, campañas en Meta Ads y Google Ads con segmentación inteligente, e identidad de marca.</strong>
     <span data-es=" Todo profesional. Todo remoto." data-en=" All professional. All remote."> Todo profesional. Todo remoto.</span>
   </p>
 
   <div class="hero-ctas">
     <a href="https://wa.me/5215549535871?text=Hola%20SISLAND%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios" target="_blank" class="btn-primary">
-      📲 <span data-es="Quiero mi Presencia Digital" data-en="Get My Digital Presence">Quiero mi Presencia Digital</span>
+      📲 <span data-es="Hablemos de tu Negocio" data-en="Let's Talk About Your Business">Hablemos de tu Negocio</span>
     </a>
     <a href="#services" class="btn-outline">
       <span data-es="Ver Servicios" data-en="View Services">Ver Servicios</span> →
@@ -1141,19 +1102,15 @@
         <h4 data-es="Página Web Profesional" data-en="Professional Website">Página Web Profesional</h4>
         <p data-es="Diseño personalizado con código limpio — carga rápida, compatible en todos los dispositivos, formulario de contacto incluido." data-en="Custom design with clean code — fast loading, compatible on all devices, contact form included.">Diseño personalizado con código limpio — carga rápida, compatible en todos los dispositivos, formulario de contacto incluido.</p>
       </div>
-      <!-- 2. Correo Corporativo -->
+
+      <!-- 2. Desarrollo de Software Personalizado -->
       <div class="svc-card reveal">
-        <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="20" height="16" rx="3" stroke="#2db8c5" stroke-width="1.5"/><path d="M2 7l10 7 10-7" stroke="#2db8c5" stroke-width="1.5" stroke-linecap="round"/></svg></span>
-        <h4 data-es="Correo Corporativo Personalizado" data-en="Custom Corporate Email">Correo Corporativo Personalizado</h4>
-        <p data-es="Tu propio correo nombre@tuempresa.com — identidad profesional desde el primer mensaje." data-en="Your own name@yourcompany.com email — professional identity from the first message.">Tu propio correo nombre@tuempresa.com — identidad profesional desde el primer mensaje.</p>
+        <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="20" height="16" rx="3" stroke="#c9a84c" stroke-width="1.5"/><path d="M8 9l-3 3 3 3" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 9l3 3-3 3" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 8l-2 8" stroke="#4dd9e6" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <h4 data-es="Desarrollo de Software Personalizado" data-en="Custom Software Development">Desarrollo de Software Personalizado</h4>
+        <p data-es="Herramientas digitales propias, programadas específicamente para tu negocio: cotizadores interactivos, catálogos, CRM personalizado y automatizaciones que le quitan trabajo manual a tu operación." data-en="Proprietary digital tools, programmed specifically for your business: interactive quote calculators, catalogs, custom CRM and automations that take manual work off your plate.">Herramientas digitales propias, programadas específicamente para tu negocio: cotizadores interactivos, catálogos, CRM personalizado y automatizaciones que le quitan trabajo manual a tu operación.</p>
       </div>
-      <!-- 3. Google Business -->
-      <div class="svc-card reveal">
-        <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#c9a84c" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" fill="#2db8c5"/></svg></span>
-        <h4 data-es="Google Business — Asesoría" data-en="Google Business — Consulting">Google Business — Asesoría</h4>
-        <p data-es="Te guiamos paso a paso para que tu negocio aparezca verificado en Google Maps y búsquedas locales." data-en="We guide you step by step so your business appears verified on Google Maps and local searches.">Te guiamos paso a paso para que tu negocio aparezca verificado en Google Maps y búsquedas locales.</p>
-      </div>
-      <!-- 4. PREMIUM — Campañas Paid Meta Ads + Google Ads -->
+
+      <!-- 3. PREMIUM — Campañas Paid Meta Ads + Google Ads -->
       <div class="svc-card svc-premium reveal">
         <div class="svc-premium-icons">
           <svg viewBox="0 0 24 24" fill="none" width="32" height="32"><circle cx="12" cy="12" r="10" fill="#1877F2"/><path d="M13.5 8H15V6h-1.5C11.567 6 10 7.567 10 9.5V11H8v2h2v6h2v-6h2l.5-2H12V9.5c0-.828.672-1.5 1.5-1.5z" fill="white"/></svg>
@@ -1166,119 +1123,60 @@
           <p class="svc-paid-note" data-es="* La inversión publicitaria se define según los objetivos de cada negocio, en la consulta inicial." data-en="* Ad spend is defined based on each business's goals, during the initial consultation.">* La inversión publicitaria se define según los objetivos de cada negocio, en la consulta inicial.</p>
         </div>
       </div>
-      <!-- 5. Redes Sociales -->
+
+      <!-- 4. Configuración y Estrategia de Redes Sociales y WhatsApp Business -->
       <div class="svc-card reveal">
         <span class="svc-icon"><svg viewBox="0 0 52 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="12" r="7" fill="#1877F2"/><text x="4.5" y="16" font-size="10" fill="white" font-family="Arial" font-weight="bold">f</text><rect x="18" y="4" width="16" height="16" rx="5" fill="url(#ig)" stroke="none"/><defs><linearGradient id="ig" x1="18" y1="20" x2="34" y2="4" gradientUnits="userSpaceOnUse"><stop stop-color="#F58529"/><stop offset=".5" stop-color="#DD2A7B"/><stop offset="1" stop-color="#8134AF"/></linearGradient></defs><circle cx="26" cy="12" r="4" stroke="white" stroke-width="1.5"/><circle cx="30.5" cy="7.5" r="1" fill="white"/><rect x="37" y="4" width="14" height="16" rx="3" fill="black"/><path d="M41 8v8l7-4-7-4z" fill="white"/></svg></span>
-        <h4 data-es="Redes Sociales" data-en="Social Media">Redes Sociales</h4>
-        <p data-es="FB, IG, TikTok, YouTube — creadas y optimizadas." data-en="FB, IG, TikTok, YouTube — created and optimized.">FB, IG, TikTok, YouTube — creadas y optimizadas.</p>
+        <h4 data-es="Configuración y Estrategia de Redes Sociales y WhatsApp Business" data-en="Social Media & WhatsApp Business Setup and Strategy">Configuración y Estrategia de Redes Sociales y WhatsApp Business</h4>
+        <p data-es="Creamos y configuramos tus cuentas de negocio en Facebook, Instagram, TikTok, YouTube y WhatsApp Business — no perfiles personales: categoría, biografía, botones de contacto, catálogo y enlaces optimizados desde el día uno. Para Facebook e Instagram, incluimos 2-3 públicos de segmentación ya investigados y definidos según el nicho específico de tu negocio, listos para que tú mismo lances campañas en Meta Ads Manager cuando quieras." data-en="We create and configure your business accounts on Facebook, Instagram, TikTok, YouTube and WhatsApp Business — not personal profiles: category, bio, contact buttons, catalog and optimized links from day one. For Facebook and Instagram, we include 2-3 already-researched audience segments defined for your business's specific niche, ready for you to launch campaigns in Meta Ads Manager whenever you want.">Creamos y configuramos tus cuentas de negocio en Facebook, Instagram, TikTok, YouTube y WhatsApp Business — no perfiles personales: categoría, biografía, botones de contacto, catálogo y enlaces optimizados desde el día uno. Para Facebook e Instagram, incluimos 2-3 públicos de segmentación ya investigados y definidos según el nicho específico de tu negocio, listos para que tú mismo lances campañas en Meta Ads Manager cuando quieras.</p>
       </div>
-      <!-- 6. WhatsApp Business -->
+
+      <!-- 5. Video Promocional e Informativo -->
       <div class="svc-card reveal">
-        <span class="svc-icon"><svg viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></span>
-        <h4>WhatsApp Business</h4>
-        <p data-es="Configuración + respuestas automáticas profesionales." data-en="Setup + professional automatic replies.">Configuración + respuestas automáticas profesionales.</p>
+        <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="5" width="20" height="14" rx="3" stroke="#2db8c5" stroke-width="1.5"/><path d="M10 9l6 3-6 3V9z" fill="#c9a84c"/></svg></span>
+        <h4 data-es="Video Promocional e Informativo" data-en="Promotional & Informational Video">Video Promocional e Informativo</h4>
+        <p data-es="Producción y edición de videos cortos para redes y sitio web: promocionales, informativos y demostrativos de producto/servicio. Edición profesional con CapCut y diseño en Canva." data-en="Production and editing of short videos for social media and your website: promotional, informational and product/service demos. Professional editing with CapCut and design in Canva.">Producción y edición de videos cortos para redes y sitio web: promocionales, informativos y demostrativos de producto/servicio. Edición profesional con CapCut y diseño en Canva.</p>
       </div>
-      <!-- 7. Automatizaciones -->
+
+      <!-- 6. Google Business -->
       <div class="svc-card reveal">
-        <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="8" width="14" height="12" rx="3" stroke="#2db8c5" stroke-width="1.5"/><path d="M9 8V6a3 3 0 016 0v2" stroke="#2db8c5" stroke-width="1.5"/><circle cx="9" cy="14" r="1.5" fill="#2db8c5"/><circle cx="15" cy="14" r="1.5" fill="#c9a84c"/><path d="M9 17.5h6" stroke="#2db8c5" stroke-width="1.5" stroke-linecap="round"/><path d="M12 8v1" stroke="#2db8c5" stroke-width="1.5" stroke-linecap="round"/></svg></span>
-        <h4 data-es="Automatizaciones" data-en="Automations">Automatizaciones</h4>
-        <p data-es="Mensajes automáticos en Facebook y WhatsApp Business." data-en="Automatic messages on Facebook and WhatsApp Business.">Mensajes automáticos en Facebook y WhatsApp Business.</p>
+        <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#c9a84c" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" fill="#2db8c5"/></svg></span>
+        <h4 data-es="Google Business — Asesoría" data-en="Google Business — Consulting">Google Business — Asesoría</h4>
+        <p data-es="Te guiamos paso a paso para que tu negocio aparezca verificado en Google Maps y búsquedas locales." data-en="We guide you step by step so your business appears verified on Google Maps and local searches.">Te guiamos paso a paso para que tu negocio aparezca verificado en Google Maps y búsquedas locales.</p>
       </div>
-      <!-- 8. Tarjeta Digital QR -->
+
+      <!-- 7. Correo Corporativo -->
+      <div class="svc-card reveal">
+        <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="20" height="16" rx="3" stroke="#2db8c5" stroke-width="1.5"/><path d="M2 7l10 7 10-7" stroke="#2db8c5" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <h4 data-es="Correo Corporativo Personalizado" data-en="Custom Corporate Email">Correo Corporativo Personalizado</h4>
+        <p data-es="Tu propio correo nombre@tuempresa.com — identidad profesional desde el primer mensaje." data-en="Your own name@yourcompany.com email — professional identity from the first message.">Tu propio correo nombre@tuempresa.com — identidad profesional desde el primer mensaje.</p>
+      </div>
+
+      <!-- 8. Tarjeta Digital (Smart Card) -->
       <div class="svc-card reveal">
         <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="7" height="7" rx="1" stroke="#2db8c5" stroke-width="1.5"/><rect x="5" y="5" width="3" height="3" fill="#2db8c5"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="#2db8c5" stroke-width="1.5"/><rect x="16" y="5" width="3" height="3" fill="#2db8c5"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="#2db8c5" stroke-width="1.5"/><rect x="5" y="16" width="3" height="3" fill="#2db8c5"/><rect x="14" y="14" width="3" height="3" fill="#c9a84c"/><rect x="18" y="14" width="3" height="3" fill="#c9a84c"/><rect x="14" y="18" width="3" height="3" fill="#c9a84c"/><rect x="18" y="18" width="3" height="3" fill="#c9a84c"/></svg></span>
-        <h4 data-es="Tarjeta Digital con QR" data-en="Digital Card with QR">Tarjeta Digital con QR</h4>
-        <p data-es="vCard con QR directo a WhatsApp o Facebook. Compártela desde tu celular o imprímela." data-en="vCard with QR linking to WhatsApp or Facebook. Share from your phone or print it.">vCard con QR directo a WhatsApp o Facebook. Compártela o imprímela.</p>
+        <h4 data-es="Tarjeta Digital (Smart Card)" data-en="Digital Card (Smart Card)">Tarjeta Digital (Smart Card)</h4>
+        <p data-es="Una sola tarjeta con enlace directo a WhatsApp, tu sitio web, correo y todas tus redes sociales — con botón de Guardar Contacto para que te agreguen a la agenda sin escribir nada. Compártela con un link o un código QR." data-en="One single card with a direct link to WhatsApp, your website, email and all your social media — with a Save Contact button so people add you to their phone without typing anything. Share it as a link or a QR code.">Una sola tarjeta con enlace directo a WhatsApp, tu sitio web, correo y todas tus redes sociales — con botón de "Guardar Contacto" para que te agreguen a la agenda sin escribir nada. Compártela con un link o un código QR.</p>
       </div>
+
       <!-- 9. Logo y Diseño -->
       <div class="svc-card reveal">
         <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.1 0 2-.9 2-2v-.5c0-.55-.2-1.05-.53-1.43-.32-.37-.5-.85-.5-1.37 0-1.1.9-2 2-2h2c3.31 0 6-2.69 6-6 0-4.97-4.48-9-10-9z" stroke="#c9a84c" stroke-width="1.5"/><circle cx="7" cy="12" r="1.5" fill="#2db8c5"/><circle cx="9" cy="7.5" r="1.5" fill="#c9a84c"/><circle cx="15" cy="7.5" r="1.5" fill="#4dd9e6"/><circle cx="17" cy="12" r="1.5" fill="#c9a84c"/></svg></span>
         <h4 data-es="Logo y Diseño Gráfico" data-en="Logo & Graphic Design">Logo y Diseño Gráfico</h4>
         <p data-es="Logo profesional, portadas y materiales visuales." data-en="Professional logo, covers and visual materials.">Logo profesional, portadas y materiales visuales.</p>
       </div>
-      <!-- 10. Reels -->
-      <div class="svc-card reveal">
-        <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="5" width="20" height="14" rx="3" stroke="#2db8c5" stroke-width="1.5"/><path d="M10 9l6 3-6 3V9z" fill="#c9a84c"/></svg></span>
-        <h4 data-es="Reels" data-en="Reels">Reels</h4>
-        <p data-es="Videos cortos profesionales para redes sociales." data-en="Short professional videos for social media.">Videos cortos profesionales para redes sociales.</p>
-      </div>
-      <!-- 11. Identidad de Marca ESPECIAL -->
+
+      <!-- 10. Identidad de Marca ESPECIAL -->
       <div class="svc-card svc-special reveal" data-badge="★ ESPECIAL">
         <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3h12l4 6-10 12L2 9l4-6z" stroke="#c9a84c" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 9h20M8 3l-2 6 6 12M16 3l2 6-6 12" stroke="#c9a84c" stroke-width="1" opacity=".5"/></svg></span>
         <h4 data-es="Identidad de Marca Completa" data-en="Complete Brand Identity">Identidad de Marca Completa</h4>
-        <p data-es="Logo · Paleta · Tipografías · Slogan · Guía de uso · Kit de redes · Tarjeta digital QR." data-en="Logo · Color palette · Fonts · Slogan · Usage guide · Social kit · QR digital card.">Logo · Paleta · Tipografías · Slogan · Guía de uso · Kit de redes · Tarjeta digital QR.</p>
+        <p data-es="Logo · Paleta · Tipografías · Slogan · Guía de uso · Kit de redes · Tarjeta digital." data-en="Logo · Color palette · Fonts · Slogan · Usage guide · Social kit · Digital card.">Logo · Paleta · Tipografías · Slogan · Guía de uso · Kit de redes · Tarjeta digital.</p>
       </div>
 
     </div>
-  </div>
-</section>
 
-<!-- ════════════════════════════════
-     SOLUTIONS / BUNDLES (antes "Paquetes")
-════════════════════════════════ -->
-<div class="section-divider"><span>✦</span></div>
-<section id="bundles">
-  <div class="bundles-inner">
-    <div class="section-header">
-      <div class="section-label reveal" data-es="Soluciones" data-en="Solutions">Soluciones</div>
-      <h2 class="section-title reveal">
-        <span data-es="Combinaciones de" data-en="Combinations of">Combinaciones de</span> <span class="teal" data-es="Servicios" data-en="Services">Servicios</span>
-      </h2>
-      <p class="section-sub reveal" data-es="Agrupamos nuestros servicios en soluciones pensadas para distintas etapas de crecimiento. Cada una se adapta a tu negocio." data-en="We group our services into solutions designed for different growth stages. Each one adapts to your business.">Agrupamos nuestros servicios en soluciones pensadas para distintas etapas de crecimiento. Cada una se adapta a tu negocio.</p>
-    </div>
-
-    <div class="pkg-grid reveal">
-      <!-- STARTER -->
-      <div class="pkg">
-        <p class="pkg-name" data-es="Starter" data-en="Starter">Starter</p>
-        <p class="pkg-tag" data-es="Tu primer paso al mundo digital" data-en="Your first step into the digital world">Tu primer paso al mundo digital</p>
-        <hr>
-        <ul>
-          <li data-es="2 redes sociales (FB + IG)" data-en="2 social media accounts (FB + IG)">2 redes sociales (FB + IG)</li>
-          <li data-es="WhatsApp Business + respuestas automáticas" data-en="WhatsApp Business + auto-replies">WhatsApp Business + respuestas automáticas</li>
-          <li data-es="Portada FB + foto de perfil profesional" data-en="Facebook cover + professional profile photo">Portada FB + foto de perfil profesional</li>
-          <li data-es="Tarjeta digital con QR" data-en="Digital card with QR">Tarjeta digital con QR</li>
-        </ul>
-        <a href="https://wa.me/5215549535871?text=Me%20interesa%20la%20Soluci%C3%B3n%20Starter" target="_blank" class="pkg-btn" data-es="Solicitar información" data-en="Request information">Solicitar información</a>
-      </div>
-
-      <!-- PRESENCIA -->
-      <div class="pkg featured">
-        <div class="pkg-badge" data-es="MÁS POPULAR" data-en="MOST POPULAR">MÁS POPULAR</div>
-        <p class="pkg-name" data-es="Presencia" data-en="Presence">Presencia</p>
-        <p class="pkg-tag" data-es="Tu marca, visible y consistente" data-en="Your brand, visible and consistent">Tu marca, visible y consistente</p>
-        <hr>
-        <ul>
-          <li data-es="Todo lo del Starter" data-en="Everything in Starter">Todo lo del Starter</li>
-          <li data-es="3 redes sociales (FB + IG + TikTok o YouTube)" data-en="3 social media (FB + IG + TikTok or YouTube)">3 redes sociales (FB + IG + TikTok o YouTube)</li>
-          <li data-es="Logo profesional" data-en="Professional logo">Logo profesional</li>
-          <li data-es="3 Reels/videos cortos" data-en="3 short Reels/videos">3 Reels/videos cortos</li>
-          <li data-es="Automatización mensajes FB + WhatsApp" data-en="FB + WhatsApp message automation">Automatización mensajes FB + WhatsApp</li>
-          <li data-es="Tarjeta digital con QR" data-en="Digital card with QR">Tarjeta digital con QR</li>
-        </ul>
-        <a href="https://wa.me/5215549535871?text=Me%20interesa%20la%20Soluci%C3%B3n%20Presencia" target="_blank" class="pkg-btn" data-es="Solicitar información" data-en="Request information">Solicitar información</a>
-      </div>
-
-      <!-- ECOSISTEMA -->
-      <div class="pkg">
-        <p class="pkg-name" data-es="Ecosistema Completo" data-en="Complete Ecosystem">Ecosistema Completo</p>
-        <p class="pkg-tag" data-es="Todo tu negocio, digitalizado" data-en="Your whole business, digitized">Todo tu negocio, digitalizado</p>
-        <hr>
-        <ul>
-          <li data-es="Todo lo de Presencia" data-en="Everything in Presence">Todo lo de Presencia</li>
-          <li data-es="Landing Page profesional publicada" data-en="Professional landing page published">Landing Page profesional publicada</li>
-          <li data-es="Formulario de contacto funcional" data-en="Functional contact form">Formulario de contacto funcional</li>
-          <li data-es="Optimización básica SEO" data-en="Basic SEO optimization">Optimización básica SEO</li>
-          <li data-es="Capacitación básica al cliente" data-en="Client training session">Capacitación básica al cliente</li>
-          <li data-es="Identidad de marca completa incluida" data-en="Complete brand identity included">Identidad de marca completa incluida</li>
-          <li data-es="Correo corporativo personalizado nombre@tuempresa.com" data-en="Custom corporate email name@yourcompany.com">Correo corporativo personalizado nombre@tuempresa.com</li>
-        </ul>
-        <a href="https://wa.me/5215549535871?text=Me%20interesa%20el%20Ecosistema%20Completo" target="_blank" class="pkg-btn" data-es="Solicitar información" data-en="Request information">Solicitar información</a>
-      </div>
-    </div>
-
-    <!-- PROPUESTA A MEDIDA -->
-    <div class="custom-proposal reveal">
+    <!-- PROPUESTA A MEDIDA (movida aquí desde Soluciones, ya que se retiraron los paquetes fijos) -->
+    <div class="custom-proposal reveal" style="margin-top:48px;">
       <div class="custom-proposal-icon">
         <svg viewBox="0 0 24 24" fill="none" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
           <path d="M9 12h6M9 16h4M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9l-7-7z" stroke="#2db8c5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1286,10 +1184,10 @@
         </svg>
       </div>
       <div class="custom-proposal-content">
-        <p class="custom-proposal-title" data-es="¿Necesitas un servicio específico?" data-en="Need a specific service?">¿Necesitas un servicio específico?</p>
-        <p class="custom-proposal-sub" data-es="Contáctanos y diseñamos una propuesta a la medida de tu negocio." data-en="Contact us and we'll design a proposal tailored to your business.">Contáctanos y diseñamos una propuesta a la medida de tu negocio.</p>
+        <p class="custom-proposal-title" data-es="¿No sabes por dónde empezar?" data-en="Not sure where to start?">¿No sabes por dónde empezar?</p>
+        <p class="custom-proposal-sub" data-es="Cuéntanos tu negocio y armamos juntos la combinación de servicios que necesitas." data-en="Tell us about your business and we'll put together the combination of services you need.">Cuéntanos tu negocio y armamos juntos la combinación de servicios que necesitas.</p>
       </div>
-      <a href="https://wa.me/5215549535871?text=Hola%20SISLAND%2C%20quiero%20una%20propuesta%20a%20la%20medida%20de%20mi%20negocio" target="_blank" class="custom-proposal-btn" data-es="Solicitar propuesta →" data-en="Request proposal →">Solicitar propuesta →</a>
+      <a href="https://wa.me/5215549535871?text=Hola%20SISLAND%2C%20cu%C3%A9ntame%20qu%C3%A9%20servicios%20necesito%20para%20mi%20negocio" target="_blank" class="custom-proposal-btn" data-es="Solicitar propuesta →" data-en="Request proposal →">Solicitar propuesta →</a>
     </div>
 
     <!-- FACTURACIÓN -->
@@ -1358,15 +1256,15 @@
 
     <h2 class="manifesto-title reveal">
       <span data-es="Rompemos la barrera." data-en="We break the barrier.">Rompemos la barrera.</span><br>
-      <span class="teal" data-es="El marketing profesional" data-en="Professional marketing">El marketing profesional</span>
-      <span data-es=" ya no es exclusivo" data-en=" is no longer exclusive"> ya no es exclusivo</span><br>
+      <span class="teal" data-es="La tecnología" data-en="Technology">La tecnología</span>
+      <span data-es=" ya no es exclusiva" data-en=" is no longer exclusive"> ya no es exclusiva</span><br>
       <span class="gold" data-es="de las grandes empresas." data-en="of big corporations.">de las grandes empresas.</span>
     </h2>
 
     <p class="manifesto-body reveal">
-      <span data-es="Durante años, las herramientas del marketing digital estuvieron reservadas para quienes podían pagar grandes agencias. " data-en="For years, digital marketing tools were reserved for those who could afford big agencies. ">Durante años, las herramientas del marketing digital estuvieron reservadas para quienes podían pagar grandes agencias. </span>
+      <span data-es="Durante años, el software a la medida y el marketing profesional estuvieron reservados para quienes podían pagar grandes agencias o su propio equipo de desarrollo. " data-en="For years, custom software and professional marketing were reserved for those who could afford big agencies or their own development team. ">Durante años, el software a la medida y el marketing profesional estuvieron reservados para quienes podían pagar grandes agencias o su propio equipo de desarrollo. </span>
       <strong data-es="SISLAND existe para cambiar eso." data-en="SISLAND exists to change that.">SISLAND existe para cambiar eso.</strong>
-      <span data-es=" Somos la agencia que construye tu presencia digital completa — página web profesional, campañas con segmentación inteligente en Meta Ads y Google Ads, identidad de marca y automatizaciones — y pone ese poder " data-en=" We are the agency that builds your complete digital presence — professional website, smart targeting campaigns on Meta Ads and Google Ads, brand identity and automation — and puts that power "> Somos la agencia que construye tu presencia digital completa — página web profesional, campañas con segmentación inteligente en Meta Ads y Google Ads, identidad de marca y automatizaciones — y pone ese poder </span>
+      <span data-es=" Somos la agencia que diseña, programa y conecta las piezas digitales que tu negocio necesita — sitio web, campañas con segmentación inteligente, identidad de marca y herramientas de software propias — y pone ese poder " data-en=" We are the agency that designs, programs and connects the digital pieces your business needs — website, smart targeting campaigns, brand identity and proprietary software tools — and puts that power "> Somos la agencia que diseña, programa y conecta las piezas digitales que tu negocio necesita — sitio web, campañas con segmentación inteligente, identidad de marca y herramientas de software propias — y pone ese poder </span>
       <em data-es="al alcance de cualquier negocio que quiera crecer." data-en="within reach of any business that wants to grow.">al alcance de cualquier negocio que quiera crecer.</em>
       <span data-es=" Sin monopolios. Sin barreras. Sin complicaciones." data-en=" No monopolies. No barriers. No complications."> Sin monopolios. Sin barreras. Sin complicaciones.</span>
     </p>
@@ -1383,9 +1281,9 @@
         <div class="pillar-desc" data-es="Atendemos México y USA sin fronteras físicas." data-en="We serve Mexico and USA without physical borders.">Atendemos México y USA sin fronteras físicas.</div>
       </div>
       <div class="pillar">
-        <div class="pillar-icon">⚡</div>
-        <div class="pillar-label" data-es="Completo" data-en="Complete">Completo</div>
-        <div class="pillar-desc" data-es="Un solo proveedor para todo tu ecosistema digital." data-en="One provider for your entire digital ecosystem.">Un solo proveedor para todo tu ecosistema digital.</div>
+        <div class="pillar-icon">💻</div>
+        <div class="pillar-label" data-es="Software Personalizado" data-en="Custom Software">Software Personalizado</div>
+        <div class="pillar-desc" data-es="Software a la medida, programado de manera profesional." data-en="Custom software, professionally programmed.">Software a la medida, programado de manera profesional.</div>
       </div>
       <div class="pillar">
         <div class="pillar-icon">🤝</div>
@@ -1419,7 +1317,7 @@
         <a href="https://wa.me/5215549535871?text=Hola%20SISLAND%2C%20quiero%20informaci%C3%B3n" target="_blank" class="contact-link">
           <div class="contact-icon" style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;background:#25D366;border-radius:50%;flex-shrink:0"><svg viewBox="0 0 24 24" fill="white" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
           <div>
-            <div class="contact-link-label">WhatsApp Business</div>
+            <div class="contact-link-label">WhatsApp</div>
             <div class="contact-link-value">+52 55 4953 5871</div>
           </div>
           <div class="contact-arrow">→</div>
@@ -1438,7 +1336,7 @@
           <div class="contact-icon" style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;background:#1877F2;border-radius:50%;flex-shrink:0"><svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.026 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.953h-1.514c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></div>
           <div>
             <div class="contact-link-label">Facebook</div>
-            <div class="contact-link-value">SISLAND | Agencia de Presencia Digital</div>
+            <div class="contact-link-value">SISLAND</div>
           </div>
           <div class="contact-arrow">→</div>
         </a>
@@ -1484,17 +1382,17 @@
         <div class="footer-logo">
           <img src="LogoRec.png" alt="SISLAND">
         </div>
-        <p data-es="Agencia de Presencia Digital. Página web profesional, campañas Meta Ads y Google Ads con segmentación inteligente, identidad de marca y automatizaciones. México y USA. 100% remoto." data-en="Digital Presence Agency. Professional website, Meta Ads & Google Ads campaigns with smart targeting, brand identity and automation. Mexico & USA. 100% remote.">Construimos tu presencia digital completa — página web, campañas Meta Ads y Google Ads con segmentación inteligente, identidad de marca y automatizaciones. México y USA. 100% remoto.</p>
+        <p data-es="Diseñamos, programamos y conectamos las piezas digitales que tu negocio necesita — sitio web, desarrollo de software personalizado, campañas Meta Ads y Google Ads, identidad de marca. México y USA. 100% remoto." data-en="We design, program and connect the digital pieces your business needs — website, custom software development, Meta Ads & Google Ads campaigns, brand identity. Mexico & USA. 100% remote.">Diseñamos, programamos y conectamos las piezas digitales que tu negocio necesita — sitio web, desarrollo de software personalizado, campañas Meta Ads y Google Ads, identidad de marca. México y USA. 100% remoto.</p>
       </div>
       <div class="footer-col">
         <h4 data-es="Servicios" data-en="Services">Servicios</h4>
         <ul>
-          <li><a href="#services" data-es="Landing Pages" data-en="Landing Pages">Landing Pages</a></li>
-          <li><a href="#services" data-es="Redes Sociales" data-en="Social Media">Redes Sociales</a></li>
+          <li><a href="#services" data-es="Página Web Profesional" data-en="Professional Website">Página Web Profesional</a></li>
+          <li><a href="#services" data-es="Desarrollo de Software Personalizado" data-en="Custom Software Development">Desarrollo de Software Personalizado</a></li>
+          <li><a href="#services" data-es="Redes Sociales y WhatsApp Business" data-en="Social Media & WhatsApp Business">Redes Sociales y WhatsApp Business</a></li>
           <li><a href="#services" data-es="Identidad de Marca" data-en="Brand Identity">Identidad de Marca</a></li>
-          <li><a href="#services" data-es="Tarjeta Digital + QR" data-en="Digital Card + QR">Tarjeta Digital + QR</a></li>
+          <li><a href="#services" data-es="Tarjeta Digital (Smart Card)" data-en="Digital Card (Smart Card)">Tarjeta Digital (Smart Card)</a></li>
           <li><a href="#services" data-es="Google Business — Asesoría" data-en="Google Business — Consulting">Google Business — Asesoría</a></li>
-          <li><a href="#services" data-es="Automatizaciones" data-en="Automations">Automatizaciones</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1502,13 +1400,13 @@
         <ul>
           <li><a href="https://wa.me/5215549535871" target="_blank">WhatsApp: +52 55 4953 5871</a></li>
           <li><a href="mailto:ana.elide@sislandmkt.com">ana.elide@sislandmkt.com</a></li>
-          <li><a href="#bundles" data-es="Ver Soluciones" data-en="View Solutions">Ver Soluciones</a></li>
+          <li><a href="#services" data-es="Ver Servicios" data-en="View Services">Ver Servicios</a></li>
           <li><a href="#process" data-es="Cómo trabajamos" data-en="How we work">Cómo trabajamos</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 <span>SISLAND</span> | Agencia de Presencia Digital · <span data-es="Todos los derechos reservados" data-en="All rights reserved">Todos los derechos reservados</span></p>
+      <p>© 2026 <span>SISLAND</span> · <span data-es="Todos los derechos reservados" data-en="All rights reserved">Todos los derechos reservados</span></p>
       <p>🌎 México & USA · 100% Remoto · 100% Profesional</p>
     </div>
   </div>
@@ -1587,18 +1485,6 @@ class Particle {
   }
 }
 
-// data stream chars
-const CHARS = '01アイウエオSISLAND</>{}[]';
-const streams = Array.from({length: 18}, () => ({
-  x: Math.random() * window.innerWidth,
-  y: Math.random() * -500,
-  speed: Math.random() * .6 + .3,
-  chars: Array.from({length: Math.floor(Math.random()*8+4)}, () =>
-    CHARS[Math.floor(Math.random()*CHARS.length)]),
-  opacity: Math.random() * .12 + .04,
-  size: Math.floor(Math.random()*4)+9
-}));
-
 for(let i=0;i<80;i++) particles.push(new Particle());
 
 function drawConnections() {
@@ -1621,20 +1507,6 @@ function drawConnections() {
 
 function animateParticles() {
   ctx.clearRect(0,0,W,H);
-
-  // data streams
-  streams.forEach(s => {
-    s.y += s.speed;
-    if(s.y > H + 200) { s.y = -200; s.x = Math.random()*W; }
-    s.chars.forEach((ch, i) => {
-      const alpha = s.opacity * (1 - i/s.chars.length);
-      ctx.fillStyle = i===0
-        ? `rgba(${GOLD},${alpha*1.5})`
-        : `rgba(${TEAL},${alpha})`;
-      ctx.font = `${s.size}px monospace`;
-      ctx.fillText(ch, s.x, s.y - i*s.size*1.2);
-    });
-  });
 
   drawConnections();
   particles.forEach(p => { p.update(); p.draw(); });
@@ -1686,96 +1558,6 @@ animateParticles();
   setTimeout(type, 1200);
 })();
 
-// ══════════════════════════════════════
-// AMBIENT MUSIC — Web Audio API
-// ══════════════════════════════════════
-let audioCtx = null, musicPlaying = false;
-let gainNode, oscillators = [], noiseNode;
-
-function createAmbientMusic() {
-  audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-  gainNode = audioCtx.createGain();
-  gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
-  gainNode.gain.linearRampToValueAtTime(0.06, audioCtx.currentTime + 2);
-  gainNode.connect(audioCtx.destination);
-
-  // reverb
-  const convolver = audioCtx.createConvolver();
-  const revLen = audioCtx.sampleRate * 3;
-  const revBuf = audioCtx.createBuffer(2, revLen, audioCtx.sampleRate);
-  for(let ch=0;ch<2;ch++) {
-    const d = revBuf.getChannelData(ch);
-    for(let i=0;i<revLen;i++) d[i] = (Math.random()*2-1) * Math.pow(1-i/revLen, 2);
-  }
-  convolver.buffer = revBuf;
-  const revGain = audioCtx.createGain(); revGain.gain.value = 0.4;
-  convolver.connect(revGain); revGain.connect(audioCtx.destination);
-
-  // drone pads — tech ambient chord
-  const freqs = [55, 82.4, 110, 164.8, 220, 329.6];
-  freqs.forEach((f, i) => {
-    const osc = audioCtx.createOscillator();
-    const og  = audioCtx.createGain();
-    osc.type = i % 2 === 0 ? 'sine' : 'triangle';
-    osc.frequency.value = f;
-    // slow frequency modulation
-    const lfo = audioCtx.createOscillator();
-    const lfog = audioCtx.createGain();
-    lfo.frequency.value = 0.05 + i * 0.02;
-    lfog.gain.value = f * 0.003;
-    lfo.connect(lfog); lfog.connect(osc.frequency);
-    lfo.start();
-    og.gain.value = 0.012 - i * 0.001;
-    osc.connect(og); og.connect(gainNode); og.connect(convolver);
-    osc.start();
-    oscillators.push(osc, lfo);
-  });
-
-  // subtle hi-freq shimmer
-  const shimmer = audioCtx.createOscillator();
-  const shg = audioCtx.createGain();
-  shimmer.type = 'sine';
-  shimmer.frequency.value = 880;
-  shg.gain.value = 0.004;
-  const shLFO = audioCtx.createOscillator();
-  const shLG  = audioCtx.createGain();
-  shLFO.frequency.value = 0.3; shLG.gain.value = 0.003;
-  shLFO.connect(shLG); shLG.connect(shg.gain);
-  shLFO.start(); shimmer.start();
-  shimmer.connect(shg); shg.connect(gainNode);
-  oscillators.push(shimmer, shLFO);
-
-  // noise layer (very subtle)
-  const bufSize = audioCtx.sampleRate * 2;
-  const nBuf = audioCtx.createBuffer(1, bufSize, audioCtx.sampleRate);
-  const nd = nBuf.getChannelData(0);
-  for(let i=0;i<bufSize;i++) nd[i] = Math.random()*2-1;
-  noiseNode = audioCtx.createBufferSource();
-  noiseNode.buffer = nBuf; noiseNode.loop = true;
-  const noiseG = audioCtx.createGain(); noiseG.gain.value = 0.003;
-  const filter = audioCtx.createBiquadFilter();
-  filter.type = 'bandpass'; filter.frequency.value = 800; filter.Q.value = 0.5;
-  noiseNode.connect(filter); filter.connect(noiseG); noiseG.connect(gainNode);
-  noiseNode.start();
-}
-
-function toggleMusic() {
-  const btn = document.getElementById('music-btn');
-  if(!audioCtx) createAmbientMusic();
-
-  if(!musicPlaying) {
-    if(audioCtx.state === 'suspended') audioCtx.resume();
-    gainNode.gain.cancelScheduledValues(audioCtx.currentTime);
-    gainNode.gain.linearRampToValueAtTime(0.06, audioCtx.currentTime + 1.5);
-    musicPlaying = true;
-    btn.classList.remove('paused');
-  } else {
-    gainNode.gain.cancelScheduledValues(audioCtx.currentTime);
-    gainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 1.5);
-    musicPlaying = false;
-    btn.classList.add('paused');
-  }
-}
 </script>
 </body>
 </html>
