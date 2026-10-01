@@ -561,37 +561,26 @@
   .svc-premium {
     border: 1.5px solid rgba(45,184,197,.5) !important;
     background: rgba(45,184,197,.05) !important;
-    grid-column: span 2;
-    display: flex !important;
-    flex-direction: row !important;
-    text-align: left !important;
-    align-items: center !important;
-    gap: 24px;
-    padding: 26px 28px !important;
-    align-self: start;
+    position: relative;
+  }
+  .svc-premium::before {
+    content: attr(data-badge);
+    position: absolute; top: -11px; left: 50%; transform: translateX(-50%);
+    background: var(--teal); color: var(--black);
+    font-size: 9px; font-weight: 800; letter-spacing: 1.5px;
+    padding: 3px 12px; border-radius: 20px; white-space: nowrap;
   }
   .svc-premium:hover {
     border-color: rgba(45,184,197,.8) !important;
     background: rgba(45,184,197,.09) !important;
     box-shadow: 0 20px 50px rgba(45,184,197,.15) !important;
-    transform: translateY(-4px) !important;
   }
   .svc-premium-icons {
-    display: flex; flex-direction: column; gap: 10px;
-    align-items: center; flex-shrink: 0;
+    display: flex; flex-direction: row; gap: 10px;
+    align-items: center; justify-content: center;
+    margin-bottom: 16px;
   }
-  .svc-premium-content { flex: 1; }
-  .svc-premium-badge {
-    display: inline-block; margin-bottom: 8px;
-    background: rgba(45,184,197,.15); border: 1px solid rgba(45,184,197,.4);
-    color: var(--teal); font-size: 10px; font-weight: 800;
-    letter-spacing: 2px; padding: 3px 12px; border-radius: 20px;
-  }
-  .svc-premium h4 {
-    color: var(--teal-light) !important; font-size: 15px !important;
-    margin-bottom: 8px;
-  }
-  .svc-premium p { font-size: 13px !important; }
+  .svc-premium h4 { color: var(--teal-light) !important; }
   .svc-paid-note {
     font-size: 11px !important; color: var(--gray) !important;
     font-style: italic; margin-top: 10px !important;
@@ -599,12 +588,9 @@
   }
   @media (max-width: 640px) {
     .services-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
-    .svc-premium { grid-column: span 2; flex-direction: column; align-items: flex-start !important; }
-    .svc-premium-icons { flex-direction: row; }
   }
   @media (max-width: 420px) {
     .services-grid { grid-template-columns: 1fr; }
-    .svc-premium { grid-column: span 1; }
   }
   .svc-special::before {
     content: attr(data-badge);
@@ -1175,17 +1161,14 @@
       </div>
 
       <!-- 3. PREMIUM — Campañas Paid Meta Ads + Google Ads -->
-      <div class="svc-card svc-premium reveal">
+      <div class="svc-card svc-premium reveal" data-badge="★ PREMIUM">
         <div class="svc-premium-icons">
-          <svg viewBox="0 0 24 24" fill="none" width="32" height="32"><circle cx="12" cy="12" r="10" fill="#1877F2"/><path d="M13.5 8H15V6h-1.5C11.567 6 10 7.567 10 9.5V11H8v2h2v6h2v-6h2l.5-2H12V9.5c0-.828.672-1.5 1.5-1.5z" fill="white"/></svg>
-          <svg viewBox="0 0 24 24" fill="none" width="32" height="32"><circle cx="12" cy="12" r="10" fill="#EA4335"/><path d="M12 7C9.24 7 7 9.24 7 12s2.24 5 5 5 5-2.24 5-5h-5V9.8h7.72c.1.38.16.77.16 1.2 0 3.87-2.61 6.62-6.38 6.62A7.42 7.42 0 014.6 12 7.42 7.42 0 0112 4.6c2 0 3.82.76 5.18 1.99L15.4 8.37A5.02 5.02 0 0012 7z" fill="white"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" width="28" height="28"><circle cx="12" cy="12" r="10" fill="#1877F2"/><path d="M13.5 8H15V6h-1.5C11.567 6 10 7.567 10 9.5V11H8v2h2v6h2v-6h2l.5-2H12V9.5c0-.828.672-1.5 1.5-1.5z" fill="white"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" width="28" height="28"><circle cx="12" cy="12" r="10" fill="#EA4335"/><path d="M12 7C9.24 7 7 9.24 7 12s2.24 5 5 5 5-2.24 5-5h-5V9.8h7.72c.1.38.16.77.16 1.2 0 3.87-2.61 6.62-6.38 6.62A7.42 7.42 0 014.6 12 7.42 7.42 0 0112 4.6c2 0 3.82.76 5.18 1.99L15.4 8.37A5.02 5.02 0 0012 7z" fill="white"/></svg>
         </div>
-        <div class="svc-premium-content">
-          <div class="svc-premium-badge" data-es="★ SERVICIO PREMIUM" data-en="★ PREMIUM SERVICE">★ SERVICIO PREMIUM</div>
-          <h4 data-es="Campañas Paid — Meta Ads & Google Ads" data-en="Paid Campaigns — Meta Ads & Google Ads">Campañas Paid — Meta Ads & Google Ads</h4>
-          <p data-es="Anuncios en Facebook, Instagram y Google con segmentación inteligente para encontrar a tu cliente ideal. Incluye estrategia, creación de anuncios, optimización continua y reporte mensual." data-en="Ads on Facebook, Instagram and Google with smart targeting to find your ideal customer. Includes strategy, ad creation, continuous optimization and monthly report.">Anuncios en Facebook, Instagram y Google con segmentación inteligente para encontrar a tu cliente ideal. Estrategia, creación, optimización y reporte mensual incluidos.</p>
-          <p class="svc-paid-note" data-es="* La inversión publicitaria se define según los objetivos de cada negocio, en la consulta inicial." data-en="* Ad spend is defined based on each business's goals, during the initial consultation.">* La inversión publicitaria se define según los objetivos de cada negocio, en la consulta inicial.</p>
-        </div>
+        <h4 data-es="Campañas Paid — Meta Ads & Google Ads" data-en="Paid Campaigns — Meta Ads & Google Ads">Campañas Paid — Meta Ads & Google Ads</h4>
+        <p data-es="Anuncios en Facebook, Instagram y Google con segmentación inteligente para encontrar a tu cliente ideal. Incluye estrategia, creación de anuncios, optimización continua y reporte mensual." data-en="Ads on Facebook, Instagram and Google with smart targeting to find your ideal customer. Includes strategy, ad creation, continuous optimization and monthly report.">Anuncios en Facebook, Instagram y Google con segmentación inteligente para encontrar a tu cliente ideal. Estrategia, creación, optimización y reporte mensual incluidos.</p>
+        <p class="svc-paid-note" data-es="* La inversión publicitaria se define según los objetivos de cada negocio, en la consulta inicial." data-en="* Ad spend is defined based on each business's goals, during the initial consultation.">* La inversión publicitaria se define según los objetivos de cada negocio, en la consulta inicial.</p>
       </div>
 
       <!-- 4. Configuración y Estrategia de Redes Sociales y WhatsApp Business -->
