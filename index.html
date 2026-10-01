@@ -923,6 +923,69 @@
   /* ══════════════════════════════════════
      RESPONSIVE
   ══════════════════════════════════════ */
+  /* ══════════════════════════════════════
+     CATÁLOGO DE HERRAMIENTAS
+  ══════════════════════════════════════ */
+  #catalogo { padding: 0 20px 28px; }
+  .catalogo-inner { max-width: 1200px; margin: 0 auto; }
+  .tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px; margin-top: 56px;
+  }
+  .tool-grid { perspective: 1200px; }
+  .tool-card {
+    display: flex; flex-direction: column;
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 10px; overflow: hidden; text-decoration: none;
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    transform-style: preserve-3d; will-change: transform;
+  }
+  .tool-card:hover {
+    border-color: rgba(45,184,197,.5);
+    transform: translateY(-6px) rotateX(3deg) scale(1.015);
+    box-shadow: 0 24px 60px rgba(0,0,0,.4), 0 0 0 1px rgba(45,184,197,.3);
+  }
+  .tool-visual { height: 160px; overflow: hidden; position: relative; }
+  .tool-visual img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: saturate(.95) brightness(.92);
+    transition: transform .5s ease; display: block;
+  }
+  .tool-card:hover .tool-visual img { transform: scale(1.06); }
+  .tool-visual::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(5,8,16,0) 50%, rgba(5,8,16,.65) 100%);
+  }
+  .tool-pill {
+    position: absolute; top: 10px; right: 10px; z-index: 2;
+    font-size: 9px; letter-spacing: .05em;
+    border: 1px solid rgba(240,244,248,.3);
+    background: rgba(5,8,16,.55); color: var(--white);
+    padding: 3px 9px; border-radius: 20px;
+  }
+  .tool-body { padding: 24px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+  .tool-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+  .tool-code { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 2px; color: var(--teal); font-weight: 600; }
+  .tool-niche { font-size: 11px; color: var(--gold); letter-spacing: .3px; }
+  .tool-name { font-family: 'Cinzel', serif; font-size: 17px; font-weight: 600; color: var(--white); margin-bottom: 10px; letter-spacing: .3px; }
+  .tool-desc { font-size: 13px; color: var(--gray); line-height: 1.7; margin-bottom: 20px; flex: 1; }
+  .tool-link {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--teal); padding-top: 16px; border-top: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .tool-link::after { content: '→'; transition: transform .3s; }
+  .tool-card:hover .tool-link::after { transform: translateX(4px); }
+  .tool-card.soon { opacity: .55; cursor: default; }
+  .tool-card.soon:hover { transform: none; box-shadow: none; border-color: var(--border); }
+  .tool-card.soon .tool-visual { background: rgba(255,255,255,.02); display: flex; align-items: center; justify-content: center; }
+  .tool-card.soon .tool-link { color: var(--gray); font-style: italic; text-transform: none; letter-spacing: 0; font-weight: 500; }
+  .tool-card.soon .tool-link::after { content: ''; }
+  @media (max-width: 640px) {
+    .tool-grid { grid-template-columns: 1fr; }
+  }
+
   @media (max-width: 900px) {
     nav { padding: 0 16px; height: 60px; }
     .nav-links { display: none; }
@@ -1197,6 +1260,98 @@
         <p style="font-size:13px;font-weight:700;color:#639922;letter-spacing:.5px;margin-bottom:4px" data-es="Emitimos factura para México" data-en="We issue invoices for Mexico">Emitimos factura para México</p>
         <p style="font-size:12px;color:var(--gray);line-height:1.7" data-es="Todos nuestros servicios pueden ser facturados bajo Régimen RESICO, válido para clientes en México." data-en="All our services can be invoiced, valid for Mexico clients.">Todos nuestros servicios pueden ser facturados bajo Régimen RESICO, válido para clientes en México.</p>
       </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     CATÁLOGO DE HERRAMIENTAS
+════════════════════════════════ -->
+<div class="section-divider"><span>◈</span></div>
+<section id="catalogo">
+  <div class="catalogo-inner">
+    <div class="section-header">
+      <div class="section-label reveal" data-es="Catálogo" data-en="Catalog">Catálogo</div>
+      <h2 class="section-title reveal">
+        <span data-es="Herramientas listas para" data-en="Tools ready to">Herramientas listas para</span> <span class="teal" data-es="explorar" data-en="explore">explorar</span>
+      </h2>
+      <p class="section-sub reveal" data-es="Diseñadas para arquitectura, pensadas para ir más allá: compara resultados o deja elegir una opción, sin importar tu giro. Pruébalas como lo haría tu cliente, y escríbenos para adaptarlas a tu negocio." data-en="Designed for architecture, built to go further: compare results or let people choose an option, no matter your industry. Try them the way your customer would, and write to us to adapt them to your business.">Diseñadas para arquitectura, pensadas para ir más allá: compara resultados o deja elegir una opción, sin importar tu giro. Pruébalas como lo haría tu cliente, y escríbenos para adaptarlas a tu negocio.</p>
+    </div>
+
+    <div class="tool-grid">
+      <!-- REVEAL -->
+      <a class="tool-card reveal" href="https://galeria.sislandmkt.com" target="_blank" rel="noopener">
+        <div class="tool-visual"><img src="assets/reveal-cover.jpg" alt="SISLAND Reveal — antes y después" loading="lazy"></div>
+        <div class="tool-body">
+          <div class="tool-meta">
+            <span class="tool-code">REV · 01</span>
+            <span class="tool-niche" data-es="Arquitectura · adaptable" data-en="Architecture · adaptable">Arquitectura · adaptable</span>
+          </div>
+          <h3 class="tool-name">SISLAND Reveal</h3>
+          <p class="tool-desc" data-es="Compara antes y después de cada proyecto con una barra deslizante. Ideal para mostrar remodelaciones y obra terminada." data-en="Compare before and after on every project with a sliding bar. Great for showcasing renovations and finished work.">Compara antes y después de cada proyecto con una barra deslizante. Ideal para mostrar remodelaciones y obra terminada.</p>
+          <span class="tool-link" data-es="Explorar herramienta" data-en="Explore tool">Explorar herramienta</span>
+        </div>
+      </a>
+
+      <!-- FINISH -->
+      <a class="tool-card reveal" href="https://acabados.sislandmkt.com" target="_blank" rel="noopener">
+        <div class="tool-visual"><img src="assets/finish-cover.jpg" alt="SISLAND Finish — selector de acabados" loading="lazy"></div>
+        <div class="tool-body">
+          <div class="tool-meta">
+            <span class="tool-code">FIN · 02</span>
+            <span class="tool-niche" data-es="Arquitectura · adaptable" data-en="Architecture · adaptable">Arquitectura · adaptable</span>
+          </div>
+          <h3 class="tool-name">SISLAND Finish</h3>
+          <p class="tool-desc" data-es="El cliente elige acabados, materiales y colores para fachada, sala o cocina, y ve el cambio al instante." data-en="Your customer picks finishes, materials and colors for a facade, living room or kitchen, and sees the change instantly.">El cliente elige acabados, materiales y colores para fachada, sala o cocina, y ve el cambio al instante.</p>
+          <span class="tool-link" data-es="Explorar herramienta" data-en="Explore tool">Explorar herramienta</span>
+        </div>
+      </a>
+
+      <!-- LANDSCAPING -->
+      <a class="tool-card reveal" href="https://landscaping.sislandmkt.com" target="_blank" rel="noopener">
+        <div class="tool-visual">
+          <span class="tool-pill">EN / ES</span>
+          <img src="assets/landscaping-cover.jpg" alt="SISLAND Reveal Landscaping — antes y después de jardín" loading="lazy">
+        </div>
+        <div class="tool-body">
+          <div class="tool-meta">
+            <span class="tool-code">LAND · 03</span>
+            <span class="tool-niche" data-es="Jardinería · USA" data-en="Landscaping · USA">Jardinería · USA</span>
+          </div>
+          <h3 class="tool-name">SISLAND Reveal — Landscaping</h3>
+          <p class="tool-desc" data-es="La misma comparación antes/después, adaptada y bilingüe, para negocios de jardinería en Estados Unidos." data-en="The same before/after comparison, adapted and bilingual, for landscaping businesses in the US.">La misma comparación antes/después, adaptada y bilingüe, para negocios de jardinería en Estados Unidos.</p>
+          <span class="tool-link" data-es="Explorar herramienta" data-en="Explore tool">Explorar herramienta</span>
+        </div>
+      </a>
+
+      <!-- MENÚ (próximamente) -->
+      <div class="tool-card soon reveal">
+        <div class="tool-visual">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#8a9bb5" stroke-width="1.5" width="34" height="34"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </div>
+        <div class="tool-body">
+          <div class="tool-meta">
+            <span class="tool-code">MENU · 04</span>
+            <span class="tool-niche" data-es="Próximamente" data-en="Coming soon">Próximamente</span>
+          </div>
+          <h3 class="tool-name" style="color:var(--gray);">Catálogo de pedidos</h3>
+          <p class="tool-desc" data-es="Selecciona productos o servicios y envía el pedido armado directo por WhatsApp. En desarrollo." data-en="Pick products or services and send the finished order straight to WhatsApp. In development.">Selecciona productos o servicios y envía el pedido armado directo por WhatsApp. En desarrollo.</p>
+          <span class="tool-link" data-es="En construcción" data-en="Under construction">En construcción</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA SOFTWARE PERSONALIZADO -->
+    <div class="custom-proposal reveal" style="margin-top:48px;">
+      <div class="custom-proposal-icon">
+        <svg viewBox="0 0 24 24" fill="none" width="28" height="28" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="20" height="16" rx="3" stroke="#c9a84c" stroke-width="1.5"/><path d="M8 9l-3 3 3 3" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 9l3 3-3 3" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 8l-2 8" stroke="#4dd9e6" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="custom-proposal-content">
+        <p class="custom-proposal-title" data-es="¿Necesitas algo más específico?" data-en="Need something more specific?">¿Necesitas algo más específico?</p>
+        <p class="custom-proposal-sub" data-es="Hacemos software personalizado para tu negocio — desde una herramienta como estas hasta un sistema con cuentas y base de datos propia." data-en="We build custom software for your business — from a tool like these to a full system with accounts and its own database.">Hacemos software personalizado para tu negocio — desde una herramienta como estas hasta un sistema con cuentas y base de datos propia.</p>
+      </div>
+      <a href="https://wa.me/5215549535871?text=Hola%20SISLAND%2C%20vi%20su%20cat%C3%A1logo%20y%20me%20interesa%20un%20software%20personalizado%20para%20mi%20negocio" target="_blank" class="custom-proposal-btn" data-es="Cuéntanos tu proyecto →" data-en="Tell us about your project →">Cuéntanos tu proyecto →</a>
     </div>
 
   </div>
